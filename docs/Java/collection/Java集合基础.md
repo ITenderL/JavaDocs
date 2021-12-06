@@ -454,7 +454,7 @@ Output：
 
 实现`SortedMap`接口让 `TreeMap` 有了对集合中的元素根据键排序的能力。默认是按 key 的升序排序，不过我们也可以指定排序的比较器。示例代码如下：
 
-```
+```java
 /**
  * @author shuang.kou
  * @createTime 2020年06月15日 17:02:00
@@ -492,7 +492,7 @@ public class Person {
 
 输出:
 
-```
+```java
 person1
 person4
 person2
@@ -503,7 +503,7 @@ person3
 
 上面，我们是通过传入匿名内部类的方式实现的，你可以将代码替换成 Lambda 表达式实现的方式：
 
-```
+```java
 TreeMap<Person, String> treeMap = new TreeMap<>((person1, person2) -> {
   int num = person1.getAge() - person2.getAge();
   return Integer.compare(num, 0);
@@ -520,7 +520,7 @@ TreeMap<Person, String> treeMap = new TreeMap<>((person1, person2) -> {
 
 在openjdk8中，`HashSet`的`add()`方法只是简单的调用了`HashMap`的`put()`方法，并且判断了一下返回值以确保是否有重复元素。直接看一下`HashSet`中的源码：
 
-```
+```java
 // Returns: true if this set did not already contain the specified element
 // 返回值：当set中没有包含add的元素时返回真
 public boolean add(E e) {
@@ -530,7 +530,7 @@ public boolean add(E e) {
 
 而在`HashMap`的`putVal()`方法中也能看到如下说明：
 
-```
+```java
 // Returns : previous value, or null if none
 // 返回值：如果插入位置没有元素返回null，否则返回上一个元素
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
@@ -569,7 +569,7 @@ JDK1.8 之前 `HashMap` 底层是 **数组和链表** 结合在一起使用也�
 
 JDK 1.8 的 hash 方法 相比于 JDK 1.7 hash 方法更加简化，但是原理不变。
 
-```
+```java
     static final int hash(Object key) {
       int h;
       // key.hashCode()：返回散列值也就是hashcode
@@ -581,7 +581,7 @@ JDK 1.8 的 hash 方法 相比于 JDK 1.7 hash 方法更加简化，但是原理
 
 对比一下 JDK1.7 的 HashMap 的 hash 方法源码.
 
-```
+```java
 static int hash(int h) {
     // This function ensures that hashCodes that differ only by
     // constant multiples at each bit position have a bounded
@@ -610,6 +610,8 @@ static int hash(int h) {
 
 为了能让 HashMap 存取高效，尽量较少碰撞，也就是要尽量把数据分配均匀。我们上面也讲到了过了，Hash 值的范围值-2147483648 到 2147483647，前后加起来大概 40 亿的映射空间，只要哈希函数映射得比较均匀松散，一般应用是很难出现碰撞的。但问题是一个 40 亿长度的数组，内存是放不下的。所以这个散列值是不能直接拿来用的。用之前还要先做对数组的长度取模运算，得到的余数才能用来要存放的位置也就是对应的数组下标。这个数组下标的计算方法是“ `(n - 1) & hash`”。（n 代表数组长度）。这也就解释了 HashMap 的长度为什么是 2 的幂次方。
 
+[HashMap初始容量为什么是2的n次幂及扩容为什么是2倍的形式](https://blog.csdn.net/Y_eatMeat/article/details/118344002?spm=1001.2014.3001.5501)
+
 **这个算法应该如何设计呢？**
 
 我们首先可能会想到采用%取余的操作来实现。但是，重点来了：**“取余(%)操作中如果除数是 2 的幂次则等价于与其除数减一的与(&)操作（也就是说 hash%length==hash&(length-1)的前提是 length 是 2 的 n 次方；）。”** 并且 **采用二进制位操作 &，相对于%能够提高运算效率，这就解释了 HashMap 的长度为什么是 2 的幂次方。**
@@ -618,9 +620,9 @@ static int hash(int h) {
 
 主要原因在于并发下的 Rehash 会造成元素之间会形成一个循环链表。不过，jdk 1.8 后解决了这个问题，但是还是不建议在多线程下使用 HashMap,因为多线程下使用 HashMap 还是会存在其他问题比如数据丢失。并发环境下推荐使用 ConcurrentHashMap 。
 
-详情请查看：https://coolshell.cn/articles/9606.html
+详情请查看：https://www.cnblogs.com/chyblogs/p/11305924.html
 
-### HashMap 有哪几种常见的遍历方式?
+### HashMap常见遍历方式
 
 [HashMap 的 7 种遍历方式与性能分析！](https://mp.weixin.qq.com/s/zQBN3UvJDhRTKP6SzcZFKw)
 
@@ -637,13 +639,9 @@ static int hash(int h) {
 
 [![Hashtable全表锁](https://camo.githubusercontent.com/cd20bb24a4d5b51a5cfcca65020835e63d2e57394c79bc9d13f339b9c1449901/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d362f486173685461626c652545352538352541382545382541312541382545392539342538312e706e67)](https://camo.githubusercontent.com/cd20bb24a4d5b51a5cfcca65020835e63d2e57394c79bc9d13f339b9c1449901/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d362f486173685461626c652545352538352541382545382541312541382545392539342538312e706e67)
 
-https://www.cnblogs.com/chengxiao/p/6842045.html%3E
-
 **JDK1.7 的 ConcurrentHashMap：**
 
 [![JDK1.7的ConcurrentHashMap](https://camo.githubusercontent.com/5ac8db8f7ce3819adc3865ee5dc1232fb596471d7bfd3059445f5b0c75bc4d07/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d362f436f6e63757272656e74486173684d61702545352538382538362545362541452542352545392539342538312e6a7067)](https://camo.githubusercontent.com/5ac8db8f7ce3819adc3865ee5dc1232fb596471d7bfd3059445f5b0c75bc4d07/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d362f436f6e63757272656e74486173684d61702545352538382538362545362541452542352545392539342538312e6a7067)
-
-https://www.cnblogs.com/chengxiao/p/6842045.html%3E
 
 **JDK1.8 的 ConcurrentHashMap：**
 
@@ -661,7 +659,7 @@ JDK1.8 的 `ConcurrentHashMap` 不再是 **Segment 数组 + HashEntry 数组 + �
 
 Segment 实现了 `ReentrantLock`,所以 `Segment` 是一种可重入锁，扮演锁的角色。`HashEntry` 用于存储键值对数据。
 
-```
+```java
 static class Segment<K,V> extends ReentrantLock implements Serializable {
 }
 ```
@@ -684,7 +682,7 @@ Collections 工具类常用方法:
 
 ### 排序操作
 
-```
+```java
 void reverse(List list)//反转
 void shuffle(List list)//随机排序
 void sort(List list)//按自然排序的升序排序
@@ -695,7 +693,7 @@ void rotate(List list, int distance)//旋转。当distance为正数时，将list
 
 ### 查找,替换操作
 
-```
+```java
 int binarySearch(List list, Object key)//对List进行二分查找，返回索引，注意List必须是有序的
 int max(Collection coll)//根据元素的自然顺序，返回最大的元素。 类比int min(Collection coll)
 int max(Collection coll, Comparator c)//根据定制排序，返回最大元素，排序规则由Comparatator类控制。类比int min(Collection coll, Comparator c)
@@ -715,7 +713,7 @@ boolean replaceAll(List list, Object oldVal, Object newVal)//用新元素替换�
 
 方法如下：
 
-```
+```java
 synchronizedCollection(Collection<T>  c) //返回指定 collection 支持的同步（线程安全的）collection。
 synchronizedList(List<T> list)//返回指定列表支持的同步（线程安全的）List。
 synchronizedMap(Map<K,V> m) //返回由指定映射支持的同步（线程安全的）Map。
