@@ -1,330 +1,362 @@
-- # ITender JavaDocs
+# JavaDocs
 
-  ## Java
+### 基础
 
-  ### 基础
+***
 
-  **基础知识**：[Java 基础知识](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/jvm/Java%E5%9F%BA%E7%A1%80.md)
+#### 基础知识
 
-  **重要知识点详解：**
+* [Java 基础知识](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/basic/Java%E5%9F%BA%E7%A1%80.md)
 
-  - [为什么 Java 中只有值传递？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/why-there-only-value-passing-in-java.md)
-  - [什么是反射机制？反射机制的应用场景有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/反射机制详解.md)
-  - [代理模式详解：静态代理+JDK/CGLIB 动态代理实战](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/代理模式详解.md)
-  - [常见的 IO 模型有哪些？Java 中的 BIO、NIO、AIO 有啥区别?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/java基础知识总结)
+#### 重要知识详解
 
-  ### 集合
+- [为什么 Java 中只有值传递？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/why-there-only-value-passing-in-java.md)
+- [什么是反射机制？反射机制的应用场景有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/反射机制详解.md)
+- [代理模式详解：静态代理+JDK/CGLIB 动态代理实战](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/代理模式详解.md)
+- [常见的 IO 模型有哪些？Java 中的 BIO、NIO、AIO 有啥区别?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/java基础知识总结)
 
-  1. **[Java 集合常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合框架基础知识&面试题总结.md)** (必看 👍)
-  2. [Java 容器使用注意事项总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合使用注意事项.md)
-  3. **源码分析** ：[ArrayList 源码+扩容机制分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/arraylist-source-code.md) 、[HashMap(JDK1.8)源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/hashmap-source-code.md) 、[ConcurrentHashMap 源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/concurrent-hash-map-source-code.md)
+### 集合
 
-  ### 并发
+***
 
-  **知识点/面试题:** (必看 👍)
+#### 知识点/面试题
 
-  1. **[Java 并发基础常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java并发基础常见面试题总结.md)**
-  2. **[Java 并发进阶常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java并发进阶常见面试题总结.md)**
+[Java 集合常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合框架基础知识&面试题总结.md)
 
-  **重要知识点详解：**
+####  注意事项
 
-  1. **线程池**：[Java 线程池学习总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java线程池学习总结.md)、[拿来即用的 Java 线程池最佳实践](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/拿来即用的java线程池最佳实践.md)
-  2. [ThreadLocal 关键字解析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/threadlocal.md)
-  3. [Java 并发容器总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/并发容器总结.md)
-  4. [Atomic 原子类总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/atomic原子类总结.md)
-  5. [AQS 原理以及 AQS 同步组件总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/aqs原理以及aqs同步组件总结.md)
-  6. [CompletableFuture入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/completablefuture-intro.md)
+[Java 容器使用注意事项总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合使用注意事项.md)
 
-  ### JVM (必看 👍)
+#### 源码分析
 
-  JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html)和周志明老师的[《深入理解Java虚拟机（第3版）》](https://book.douban.com/subject/34907497/) （强烈建议阅读多遍！）。
+* [ArrayList 源码+扩容机制分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/arraylist-source-code.md) 
+* [HashMap(JDK1.8)源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/hashmap-source-code.md) 
+* [ConcurrentHashMap 源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/concurrent-hash-map-source-code.md)
 
-  1. **[Java 内存区域](https://javaguide.cn/java/jvm/jvm-garbage-collection/)**
-  2. **[JVM 垃圾回收](https://javaguide.cn/java/jvm/jvm-garbage-collection/)**
-  3. [JDK 监控和故障处理工具](https://javaguide.cn/java/jvm/jdk-monitoring-and-troubleshooting-tools/)
-  4. [类文件结构](https://javaguide.cn/java/jvm/class-file-structure/)
-  5. **[类加载过程](https://javaguide.cn/java/jvm/class-loading-process/)**
-  6. [类加载器](https://javaguide.cn/java/jvm/classloader/)
-  7. **[【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)**
-  8. **[【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)**
+### 并发编程
 
-  ### 新特性
+***
 
-  1. **Java 8** ：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
-  2. **Java9~Java15** : [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
+#### 知识点/面试题
 
-  ### 小技巧
+1. **[Java 并发基础常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java并发基础常见面试题总结.md)**
+2. **[Java 并发进阶常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java并发进阶常见面试题总结.md)**
 
-  1. [JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
-  2. [手把手教你定位常见 Java 性能问题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/locate-performance-problems/手把手教你定位常见Java性能问题.md)
+#### 重要知识点详解
 
-  ## 计算机基础
+1. **线程池**：[Java 线程池学习总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java线程池学习总结.md)、[拿来即用的 Java 线程池最佳实践](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/拿来即用的java线程池最佳实践.md)
+2. [ThreadLocal 关键字解析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/threadlocal.md)
+3. [Java 并发容器总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/并发容器总结.md)
+4. [Atomic 原子类总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/atomic原子类总结.md)
+5. [AQS 原理以及 AQS 同步组件总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/aqs原理以及aqs同步组件总结.md)
+6. [CompletableFuture入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/completablefuture-intro.md)
 
-  👉 **[图解计算机基础 PDF 下载](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=100021725&idx=1&sn=2db9664ca25363139a81691043e9fd8f&chksm=4ea19a1679d61300d8990f7e43bfc7f476577a81b712cf0f9c6f6552a8b219bc081efddb5c54#rd)** 。
+### JVM 
 
-  ### 操作系统
+***
 
-  1. [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
-  2. [后端程序员必备的 Linux 基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/linux-intro.md)
-  3. [Shell 编程入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/shell-intro.md)
+JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html)和周志明老师的[《深入理解Java虚拟机（第3版）》](https://book.douban.com/subject/34907497/) （强烈建议阅读多遍！）。
 
-  ### 网络
+1. **[Java 内存区域](https://javaguide.cn/java/jvm/jvm-garbage-collection/)**
+2. **[JVM 垃圾回收](https://javaguide.cn/java/jvm/jvm-garbage-collection/)**
+3. [JDK 监控和故障处理工具](https://javaguide.cn/java/jvm/jdk-monitoring-and-troubleshooting-tools/)
+4. [类文件结构](https://javaguide.cn/java/jvm/class-file-structure/)
+5. **[类加载过程](https://javaguide.cn/java/jvm/class-loading-process/)**
+6. [类加载器](https://javaguide.cn/java/jvm/classloader/)
+7. **[【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)**
+8. **[【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)**
 
-  1. [计算机网络常见面试题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/计算机网络常见面试题.md)
-  2. [谢希仁老师的《计算机网络》内容总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/谢希仁老师的《计算机网络》内容总结.md)
+### Java新特性
 
-  ### 数据结构
+***
 
-  **图解数据结构：**
+1. **Java 8** ：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
+2. **Java9~Java15** : [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
 
-  1. [线性数据结构 :数组、链表、栈、队列](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/线性数据结构.md)
-  2. [图](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/图.md)
-  3. [堆](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/堆.md)
-  4. [树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/树.md) ：重点关注[红黑树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/红黑树.md)、B-，B+，B*树、LSM树
+### 小技巧
 
-  其他常用数据结构 ：
+***
 
-  1. [布隆过滤器](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/bloom-filter.md)
+1. [JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
+2. [手把手教你定位常见 Java 性能问题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/locate-performance-problems/手把手教你定位常见Java性能问题.md)
 
-  ### 算法
+## 计算机基础
 
-  算法这部分内容非常重要，如果你不知道如何学习算法的话，可以看下我写的：
+👉 **[图解计算机基础 PDF 下载](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=100021725&idx=1&sn=2db9664ca25363139a81691043e9fd8f&chksm=4ea19a1679d61300d8990f7e43bfc7f476577a81b712cf0f9c6f6552a8b219bc081efddb5c54#rd)** 。
 
-  - [算法学习书籍+资源推荐](https://www.zhihu.com/question/323359308/answer/1545320858) 。
-  - [如何刷Leetcode?](https://www.zhihu.com/question/31092580/answer/1534887374)
+### 操作系统
 
-  **常见算法问题总结** ：
+***
 
-  - [几道常见的字符串算法题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/algorithms/几道常见的字符串算法题.md)
-  - [几道常见的链表算法题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/algorithms/几道常见的链表算法题.md)
-  - [剑指 offer 部分编程题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/algorithms/剑指offer部分编程题.md)
+1. [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
+2. [后端程序员必备的 Linux 基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/linux-intro.md)
+3. [Shell 编程入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/shell-intro.md)
 
-  另外，[GeeksforGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) 这个网站总结了常见的算法 ，比较全面系统。
+### 网络
 
-  ## 数据库
+***
 
-  ### MySQL
+1. [计算机网络常见面试题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/计算机网络常见面试题.md)
+2. [谢希仁老师的《计算机网络》内容总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/谢希仁老师的《计算机网络》内容总结.md)
 
-  **总结：**
+### 数据结构
 
-  1. [数据库基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/数据库基础知识.md)
-  2. **[MySQL知识点总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql知识点&面试题总结.md)** (必看 👍)
-  3. [一千行 MySQL 学习笔记](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/a-thousand-lines-of-mysql-study-notes.md)
-  4. [MySQL 高性能优化规范建议](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-high-performance-optimization-specification-recommendations.md)
+***
 
-  **重要知识点：**
+**图解数据结构：**
 
-  1. [MySQL数据库索引总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-index.md)
-  2. [事务隔离级别(图文详解)](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/transaction-isolation-level.md)
-  3. [MySQL三大日志(binlog、redo log和undo log)详解](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-logs.md)
-  4. [InnoDB存储引擎对MVCC的实现](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/innodb-implementation-of-mvcc.md)
-  5. [一条 SQL 语句在 MySQL 中如何被执行的?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/how-sql-executed-in-mysql.md)
-  6. [字符集详解：为什么不建议在MySQL中使用 utf8 ？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/字符集.md)
-  7. [关于数据库中如何存储时间的一点思考](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/some-thoughts-on-database-storage-time.md)
+1. [线性数据结构 :数组、链表、栈、队列](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/线性数据结构.md)
+2. [图](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/图.md)
+3. [堆](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/堆.md)
+4. [树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/树.md) ：重点关注[红黑树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/红黑树.md)、B-，B+，B*树、LSM树
 
-  ### Redis
+其他常用数据结构 ：
 
-  1. [Redis 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/redis知识点&面试题总结.md)
-  2. [3种常用的缓存读写策略](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/3-commonly-used-cache-read-and-write-strategies.md)
+1. [布隆过滤器](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/bloom-filter.md)
 
-  ## 搜索引擎
+### 算法
 
-  用于提高搜索效率，功能和浏览器搜索引擎类似。比较常见的搜索引擎是 Elasticsearch（推荐） 和 Solr。
+***
 
-  ## 系统设计
+算法这部分内容非常重要，如果你不知道如何学习算法的话，可以看下我写的：
 
-  ### 系统设计必备基础
+- [算法学习书籍+资源推荐](https://www.zhihu.com/question/323359308/answer/1545320858) 。
+- [如何刷Leetcode?](https://www.zhihu.com/question/31092580/answer/1534887374)
 
-  #### RESTful API
+**常见算法问题总结** ：
 
-  我们在进行后端开发的时候，主要的工作就是为前端或者其他后端服务提供 API 比如查询用户数据的 API 。RESTful API 是一种基于 REST 构建的 API，它是一种被设计的更好使用的 API。
+- [几道常见的字符串算法题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/algorithms/几道常见的字符串算法题.md)
+- [几道常见的链表算法题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/algorithms/几道常见的链表算法题.md)
+- [剑指 offer 部分编程题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/algorithms/剑指offer部分编程题.md)
 
-  相关阅读：[RestFul API 简明教程](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/basis/RESTfulAPI.md)
+另外，[GeeksforGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) 这个网站总结了常见的算法 ，比较全面系统。
 
-  #### 命名
+## 数据库
 
-  编程过程中，一定要重视命名。因为好的命名即是注释，别人一看到你的命名就知道你的变量、方法或者类是做什么的！
+***
 
-  相关阅读： [Java 命名之道](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/naming.md) 。
+### MySQL
 
-  ### 常用框架
+**总结：**
 
-  如果你没有接触过 Java Web 开发的话，可以先看一下我总结的 [《J2EE 基础知识》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/J2EE基础知识.md) 。虽然，这篇文章中的很多内容已经淘汰，但是可以让你对 Java 后台技术发展有更深的认识。
+1. [数据库基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/数据库基础知识.md)
+2. **[MySQL知识点总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql知识点&面试题总结.md)** (必看 👍)
+3. [一千行 MySQL 学习笔记](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/a-thousand-lines-of-mysql-study-notes.md)
+4. [MySQL 高性能优化规范建议](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-high-performance-optimization-specification-recommendations.md)
 
-  #### Spring/SpringBoot (必看 👍)
+**重要知识点：**
 
-  **知识点/面试题:**
+1. [MySQL数据库索引总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-index.md)
+2. [事务隔离级别(图文详解)](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/transaction-isolation-level.md)
+3. [MySQL三大日志(binlog、redo log和undo log)详解](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-logs.md)
+4. [InnoDB存储引擎对MVCC的实现](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/innodb-implementation-of-mvcc.md)
+5. [一条 SQL 语句在 MySQL 中如何被执行的?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/how-sql-executed-in-mysql.md)
+6. [字符集详解：为什么不建议在MySQL中使用 utf8 ？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/字符集.md)
+7. [关于数据库中如何存储时间的一点思考](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/some-thoughts-on-database-storage-time.md)
 
-  1. **[Spring 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring常见问题总结.md)**
-  2. **[SpringBoot 入门指南](https://github.com/Snailclimb/springboot-guide)**
+### Redis
 
-  **重要知识点详解：**
+1. [Redis 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/redis知识点&面试题总结.md)
+2. [3种常用的缓存读写策略](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/3-commonly-used-cache-read-and-write-strategies.md)
 
-  1. **[Spring/Spring Boot 常用注解总结！安排！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring&SpringBoot常用注解总结.md)**
-  2. **[Spring 事务总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring事务总结.md)**
-  3. [Spring 中都用到了那些设计模式?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring设计模式总结.md)
-  4. **[SpringBoot 自动装配原理？”](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/SpringBoot自动装配原理.md)**
+## 搜索引擎
 
-  #### MyBatis
+用于提高搜索效率，功能和浏览器搜索引擎类似。比较常见的搜索引擎是 Elasticsearch（推荐） 和 Solr。
 
-  [MyBatis 常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/mybatis/mybatis-interview.md)
+## 系统设计
 
-  #### Spring Cloud
+### 系统设计必备基础
 
-  [大白话入门 Spring Cloud](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/springcloud/springcloud-intro.md)
+#### RESTful API
 
-  ### 安全
+我们在进行后端开发的时候，主要的工作就是为前端或者其他后端服务提供 API 比如查询用户数据的 API 。RESTful API 是一种基于 REST 构建的 API，它是一种被设计的更好使用的 API。
 
-  #### 认证授权
+相关阅读：[RestFul API 简明教程](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/basis/RESTfulAPI.md)
 
-  **[《认证授权基础》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/security/basis-of-authority-certification.md)** 这篇文章中我会介绍认证授权常见概念： **Authentication**,**Authorization** 以及 **Cookie**、**Session**、Token、**OAuth 2**、**SSO** 。如果你不清楚这些概念的话，建议好好阅读一下这篇文章。
+#### 命名
 
-  - **JWT** ：JWT（JSON Web Token）是一种身份认证的方式，JWT 本质上就一段签名的 JSON 格式的数据。由于它是带有签名的，因此接收者便可以验证它的真实性。相关阅读：
-    - [JWT 优缺点分析以及常见问题解决方案](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/security/jwt优缺点分析以及常见问题解决方案.md)
-    - [适合初学者入门 Spring Security With JWT 的 Demo](https://github.com/Snailclimb/spring-security-jwt-guide)
-  - **SSO(单点登录)** ：**SSO(Single Sign On)** 即单点登录说的是用户登陆多个子系统的其中一个就有权访问与其相关的其他系统。举个例子我们在登陆了京东金融之后，我们同时也成功登陆京东的京东超市、京东家电等子系统。相关阅读：[**SSO 单点登录看这篇就够了！**](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/security/sso-intro.md)
+编程过程中，一定要重视命名。因为好的命名即是注释，别人一看到你的命名就知道你的变量、方法或者类是做什么的！
 
-  #### 数据脱敏
+相关阅读： [Java 命名之道](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/naming.md) 。
 
-  数据脱敏说的就是我们根据特定的规则对敏感信息数据进行变形，比如我们把手机号、身份证号某些位数使用 * 来代替。
+### 常用框架
 
-  ### 定时任务
+如果你没有接触过 Java Web 开发的话，可以先看一下我总结的 [《J2EE 基础知识》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/J2EE基础知识.md) 。虽然，这篇文章中的很多内容已经淘汰，但是可以让你对 Java 后台技术发展有更深的认识。
 
-  最近有朋友问到定时任务相关的问题。于是，我简单写了一篇文章总结一下定时任务的一些概念以及一些常见的定时任务技术选型：[《Java定时任务大揭秘》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/定时任务.md)
+#### Spring/SpringBoot (必看 👍)
 
-  ## 分布式
+**知识点/面试题:**
 
-  ### CAP 理论和 BASE 理论
+1. **[Spring 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring常见问题总结.md)**
+2. **[SpringBoot 入门指南](https://github.com/Snailclimb/springboot-guide)**
 
-  CAP 也就是 Consistency（一致性）、Availability（可用性）、Partition Tolerance（分区容错性） 这三个单词首字母组合。
+**重要知识点详解：**
 
-  **BASE** 是 **Basically Available（基本可用）** 、**Soft-state（软状态）** 和 **Eventually Consistent（最终一致性）** 三个短语的缩写。BASE 理论是对 CAP 中一致性和可用性权衡的结果，其来源于对大规模互联网系统分布式实践的总结，是基于 CAP 定理逐步演化而来的，它大大降低了我们对系统的要求。
+1. **[Spring/Spring Boot 常用注解总结！安排！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring&SpringBoot常用注解总结.md)**
+2. **[Spring 事务总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring事务总结.md)**
+3. [Spring 中都用到了那些设计模式?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring设计模式总结.md)
+4. **[SpringBoot 自动装配原理？”](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/SpringBoot自动装配原理.md)**
 
-  相关阅读：[CAP 理论和 BASE 理论解读](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/理论&算法/cap&base理论.md)
+#### MyBatis
 
-  ### Paxos 算法和 Raft 算法
+[MyBatis 常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/mybatis/mybatis-interview.md)
 
-  **Paxos 算法**诞生于 1990 年，这是一种解决分布式系统一致性的经典算法 。但是，由于 Paxos 算法非常难以理解和实现，不断有人尝试简化这一算法。到了2013 年才诞生了一个比 Paxos 算法更易理解和实现的分布式一致性算法—**Raft 算法**。
+#### Spring Cloud
 
-  ### RPC
+[大白话入门 Spring Cloud](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/springcloud/springcloud-intro.md)
 
-  RPC 让调用远程服务调用像调用本地方法那样简单。
+### 安全
 
-  Dubbo 是一款国产的 RPC 框架，由阿里开源。相关阅读：
+#### 认证授权
 
-  - [Dubbo 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/rpc/dubbo.md)
-  - [服务之间的调用为啥不直接用 HTTP 而用 RPC？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/rpc/why-use-rpc.md)
+**[《认证授权基础》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/security/basis-of-authority-certification.md)** 这篇文章中我会介绍认证授权常见概念： **Authentication**,**Authorization** 以及 **Cookie**、**Session**、Token、**OAuth 2**、**SSO** 。如果你不清楚这些概念的话，建议好好阅读一下这篇文章。
 
-  ### API 网关
+- **JWT** ：JWT（JSON Web Token）是一种身份认证的方式，JWT 本质上就一段签名的 JSON 格式的数据。由于它是带有签名的，因此接收者便可以验证它的真实性。相关阅读：
+  - [JWT 优缺点分析以及常见问题解决方案](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/security/jwt优缺点分析以及常见问题解决方案.md)
+  - [适合初学者入门 Spring Security With JWT 的 Demo](https://github.com/Snailclimb/spring-security-jwt-guide)
+- **SSO(单点登录)** ：**SSO(Single Sign On)** 即单点登录说的是用户登陆多个子系统的其中一个就有权访问与其相关的其他系统。举个例子我们在登陆了京东金融之后，我们同时也成功登陆京东的京东超市、京东家电等子系统。相关阅读：[**SSO 单点登录看这篇就够了！**](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/security/sso-intro.md)
 
-  网关主要用于请求转发、安全认证、协议转换、容灾。
+#### 数据脱敏
 
-  相关阅读：
+数据脱敏说的就是我们根据特定的规则对敏感信息数据进行变形，比如我们把手机号、身份证号某些位数使用 * 来代替。
 
-  - [为什么要网关？你知道有哪些常见的网关系统？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/api-gateway.md)
-  - [百亿规模API网关服务Shepherd的设计与实现](https://tech.meituan.com/2021/05/20/shepherd-api-gateway.html)
+### 定时任务
 
-  ### 分布式 id
+最近有朋友问到定时任务相关的问题。于是，我简单写了一篇文章总结一下定时任务的一些概念以及一些常见的定时任务技术选型：[《Java定时任务大揭秘》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/定时任务.md)
 
-  在复杂分布式系统中，往往需要对大量的数据和消息进行唯一标识。比如数据量太大之后，往往需要对数据进行分库分表，分库分表后需要有一个唯一 ID 来标识一条数据或消息，数据库的自增 ID 显然不能满足需求。相关阅读：[为什么要分布式 id ？分布式 id 生成方案有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/distributed-id.md)
+## 分布式
 
-  ### 分布式事务
+### CAP 理论和 BASE 理论
 
-  **分布式事务就是指事务的参与者、支持事务的服务器、资源服务器以及事务管理器分别位于不同的分布式系统的不同节点之上。**
+CAP 也就是 Consistency（一致性）、Availability（可用性）、Partition Tolerance（分区容错性） 这三个单词首字母组合。
 
-  简单的说，就是一次大的操作由不同的小操作组成，这些小的操作分布在不同的服务器上，且属于不同的应用，分布式事务需要保证这些小操作要么全部成功，要么全部失败。本质上来说，分布式事务就是为了保证不同数据库的数据一致性。
+**BASE** 是 **Basically Available（基本可用）** 、**Soft-state（软状态）** 和 **Eventually Consistent（最终一致性）** 三个短语的缩写。BASE 理论是对 CAP 中一致性和可用性权衡的结果，其来源于对大规模互联网系统分布式实践的总结，是基于 CAP 定理逐步演化而来的，它大大降低了我们对系统的要求。
 
-  ### 分布式协调
+相关阅读：[CAP 理论和 BASE 理论解读](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/理论&算法/cap&base理论.md)
 
-  **ZooKeeper** ：
+### Paxos 算法和 Raft 算法
 
-  > 前两篇文章可能有内容重合部分，推荐都看一遍。
+**Paxos 算法**诞生于 1990 年，这是一种解决分布式系统一致性的经典算法 。但是，由于 Paxos 算法非常难以理解和实现，不断有人尝试简化这一算法。到了2013 年才诞生了一个比 Paxos 算法更易理解和实现的分布式一致性算法—**Raft 算法**。
 
-  1. [【入门】ZooKeeper 相关概念总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/分布式协调/zookeeper/zookeeper-intro.md)
-  2. [【进阶】ZooKeeper 相关概念总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/分布式协调/zookeeper/zookeeper-plus.md)
-  3. [【实战】ZooKeeper 实战](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/分布式协调/zookeeper/zookeeper-in-action.md)
+### RPC
 
-  ## 高性能
+RPC 让调用远程服务调用像调用本地方法那样简单。
 
-  ### 消息队列
+Dubbo 是一款国产的 RPC 框架，由阿里开源。相关阅读：
 
-  消息队列在分布式系统中主要是为了解耦和削峰。相关阅读： [消息队列常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/message-queue.md)。
+- [Dubbo 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/rpc/dubbo.md)
+- [服务之间的调用为啥不直接用 HTTP 而用 RPC？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/rpc/why-use-rpc.md)
 
-  1. **RabbitMQ** : [RabbitMQ 入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/rabbitmq-intro.md)
-  2. **RocketMQ** : [RocketMQ 入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/rocketmq-intro)、[RocketMQ 的几个简单问题与答案](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/rocketmq-questions.md)
-  3. **Kafka** ：[Kafka 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/kafka知识点&面试题总结.md)
+### API 网关
 
-  ### 读写分离&分库分表
+网关主要用于请求转发、安全认证、协议转换、容灾。
 
-  读写分离主要是为了将数据库的读和写操作分不到不同的数据库节点上。主服务器负责写，从服务器负责读。另外，一主一从或者一主多从都可以。
+相关阅读：
 
-  读写分离可以大幅提高读性能，小幅提高写的性能。因此，读写分离更适合单机并发读请求比较多的场景。
+- [为什么要网关？你知道有哪些常见的网关系统？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/api-gateway.md)
+- [百亿规模API网关服务Shepherd的设计与实现](https://tech.meituan.com/2021/05/20/shepherd-api-gateway.html)
 
-  分库分表是为了解决由于库、表数据量过大，而导致数据库性能持续下降的问题。
+### 分布式 id
 
-  常见的分库分表工具有：`sharding-jdbc`（当当）、`TSharding`（蘑菇街）、`MyCAT`（基于 Cobar）、`Cobar`（阿里巴巴）...。 推荐使用 `sharding-jdbc`。 因为，`sharding-jdbc` 是一款轻量级 `Java` 框架，以 `jar` 包形式提供服务，不要我们做额外的运维工作，并且兼容性也很好。
+在复杂分布式系统中，往往需要对大量的数据和消息进行唯一标识。比如数据量太大之后，往往需要对数据进行分库分表，分库分表后需要有一个唯一 ID 来标识一条数据或消息，数据库的自增 ID 显然不能满足需求。相关阅读：[为什么要分布式 id ？分布式 id 生成方案有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/distributed-id.md)
 
-  相关阅读： [读写分离&分库分表常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/读写分离&分库分表.md)
+### 分布式事务
 
-  ### 负载均衡
+**分布式事务就是指事务的参与者、支持事务的服务器、资源服务器以及事务管理器分别位于不同的分布式系统的不同节点之上。**
 
-  负载均衡系统通常用于将任务比如用户请求处理分配到多个服务器处理以提高网站、应用或者数据库的性能和可靠性。
+简单的说，就是一次大的操作由不同的小操作组成，这些小的操作分布在不同的服务器上，且属于不同的应用，分布式事务需要保证这些小操作要么全部成功，要么全部失败。本质上来说，分布式事务就是为了保证不同数据库的数据一致性。
 
-  常见的负载均衡系统包括 3 种：
+### 分布式协调
 
-  1. **DNS 负载均衡** ：一般用来实现地理级别的均衡。
-  2. **硬件负载均衡** ： 通过单独的硬件设备比如 F5 来实现负载均衡功能（硬件的价格一般很贵）。
-  3. **软件负载均衡** ：通过负载均衡软件比如 Nginx 来实现负载均衡功能。
+**ZooKeeper** ：
 
-  ## 高可用
+> 前两篇文章可能有内容重合部分，推荐都看一遍。
 
-  高可用描述的是一个系统在大部分时间都是可用的，可以为我们提供服务的。高可用代表系统即使在发生硬件故障或者系统升级的时候，服务仍然是可用的 。
+1. [【入门】ZooKeeper 相关概念总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/分布式协调/zookeeper/zookeeper-intro.md)
+2. [【进阶】ZooKeeper 相关概念总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/分布式协调/zookeeper/zookeeper-plus.md)
+3. [【实战】ZooKeeper 实战](https://github.com/Snailclimb/JavaGuide/blob/main/docs/distributed-system/分布式协调/zookeeper/zookeeper-in-action.md)
 
-  相关阅读： **《[如何设计一个高可用系统？要考虑哪些地方？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-availability/高可用系统设计.md)》** 。
+## 高性能
 
-  ### 限流
+### 消息队列
 
-  限流是从用户访问压力的角度来考虑如何应对系统故障。
+消息队列在分布式系统中主要是为了解耦和削峰。相关阅读： [消息队列常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/message-queue.md)。
 
-  限流为了对服务端的接口接受请求的频率进行限制，防止服务挂掉。比如某一接口的请求限制为 100 个每秒, 对超过限制的请求放弃处理或者放到队列中等待处理。限流可以有效应对突发请求过多。相关阅读：[何为限流？限流算法有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-availability/limit-request.md)
+1. **RabbitMQ** : [RabbitMQ 入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/rabbitmq-intro.md)
+2. **RocketMQ** : [RocketMQ 入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/rocketmq-intro)、[RocketMQ 的几个简单问题与答案](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/rocketmq-questions.md)
+3. **Kafka** ：[Kafka 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/message-queue/kafka知识点&面试题总结.md)
 
-  ### 降级
+### 读写分离&分库分表
 
-  降级是从系统功能优先级的角度考虑如何应对系统故障。
+读写分离主要是为了将数据库的读和写操作分不到不同的数据库节点上。主服务器负责写，从服务器负责读。另外，一主一从或者一主多从都可以。
 
-  服务降级指的是当服务器压力剧增的情况下，根据当前业务情况及流量对一些服务和页面有策略的降级，以此释放服务器资源以保证核心任务的正常运行。
+读写分离可以大幅提高读性能，小幅提高写的性能。因此，读写分离更适合单机并发读请求比较多的场景。
 
-  ### 熔断
+分库分表是为了解决由于库、表数据量过大，而导致数据库性能持续下降的问题。
 
-  熔断和降级是两个比较容易混淆的概念，两者的含义并不相同。
+常见的分库分表工具有：`sharding-jdbc`（当当）、`TSharding`（蘑菇街）、`MyCAT`（基于 Cobar）、`Cobar`（阿里巴巴）...。 推荐使用 `sharding-jdbc`。 因为，`sharding-jdbc` 是一款轻量级 `Java` 框架，以 `jar` 包形式提供服务，不要我们做额外的运维工作，并且兼容性也很好。
 
-  降级的目的在于应对系统自身的故障，而熔断的目的在于应对当前系统依赖的外部系统或者第三方系统的故障。
+相关阅读： [读写分离&分库分表常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-performance/读写分离&分库分表.md)
 
-  ### 排队
+### 负载均衡
 
-  另类的一种限流，类比于现实世界的排队。玩过英雄联盟的小伙伴应该有体会，每次一有活动，就要经历一波排队才能进入游戏。
+负载均衡系统通常用于将任务比如用户请求处理分配到多个服务器处理以提高网站、应用或者数据库的性能和可靠性。
 
-  ### 集群
+常见的负载均衡系统包括 3 种：
 
-  相同的服务部署多份，避免单点故障。
+1. **DNS 负载均衡** ：一般用来实现地理级别的均衡。
+2. **硬件负载均衡** ： 通过单独的硬件设备比如 F5 来实现负载均衡功能（硬件的价格一般很贵）。
+3. **软件负载均衡** ：通过负载均衡软件比如 Nginx 来实现负载均衡功能。
 
-  ### 超时和重试机制
+## 高可用
 
-  **一旦用户的请求超过某个时间得不到响应就结束此次请求并抛出异常。** 如果不进行超时设置可能会导致请求响应速度慢，甚至导致请求堆积进而让系统无法在处理请求。
+高可用描述的是一个系统在大部分时间都是可用的，可以为我们提供服务的。高可用代表系统即使在发生硬件故障或者系统升级的时候，服务仍然是可用的 。
 
-  另外，重试的次数一般设为 3 次，再多次的重试没有好处，反而会加重服务器压力（部分场景使用失败重试机制会不太适合）。
+相关阅读： **《[如何设计一个高可用系统？要考虑哪些地方？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-availability/高可用系统设计.md)》** 。
 
-  ### 灾备设计和异地多活
+### 限流
 
-  **灾备** = 容灾+备份。
+限流是从用户访问压力的角度来考虑如何应对系统故障。
 
-  - **备份** ： 将系统所产生的的所有重要数据多备份几份。
-  - **容灾** ： 在异地建立两个完全相同的系统。当某个地方的系统突然挂掉，整个应用系统可以切换到另一个，这样系统就可以正常提供服务了。
+限流为了对服务端的接口接受请求的频率进行限制，防止服务挂掉。比如某一接口的请求限制为 100 个每秒, 对超过限制的请求放弃处理或者放到队列中等待处理。限流可以有效应对突发请求过多。相关阅读：[何为限流？限流算法有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/high-availability/limit-request.md)
 
-  **异地多活** 描述的是将服务部署在异地并且服务同时对外提供服务。和传统的灾备设计的最主要区别在于“多活”，即所有站点都是同时在对外提供服务的。异地多活是为了应对突发状况比如火灾、地震等自然或者认为灾害。
+### 降级
 
-  相关阅读：
+降级是从系统功能优先级的角度考虑如何应对系统故障。
 
-  - [搞懂异地多活，看这篇就够了](https://mp.weixin.qq.com/s/T6mMDdtTfBuIiEowCpqu6Q)
-  - [四步构建异地多活](https://mp.weixin.qq.com/s/hMD-IS__4JE5_nQhYPYSTg)
-  - [《从零开始学架构》— 28 | 业务高可用的保障：异地多活架构](http://gk.link/a/10pKZ)
+服务降级指的是当服务器压力剧增的情况下，根据当前业务情况及流量对一些服务和页面有策略的降级，以此释放服务器资源以保证核心任务的正常运行。
+
+### 熔断
+
+熔断和降级是两个比较容易混淆的概念，两者的含义并不相同。
+
+降级的目的在于应对系统自身的故障，而熔断的目的在于应对当前系统依赖的外部系统或者第三方系统的故障。
+
+### 排队
+
+另类的一种限流，类比于现实世界的排队。玩过英雄联盟的小伙伴应该有体会，每次一有活动，就要经历一波排队才能进入游戏。
+
+### 集群
+
+相同的服务部署多份，避免单点故障。
+
+### 超时和重试机制
+
+**一旦用户的请求超过某个时间得不到响应就结束此次请求并抛出异常。** 如果不进行超时设置可能会导致请求响应速度慢，甚至导致请求堆积进而让系统无法在处理请求。
+
+另外，重试的次数一般设为 3 次，再多次的重试没有好处，反而会加重服务器压力（部分场景使用失败重试机制会不太适合）。
+
+### 灾备设计和异地多活
+
+**灾备** = 容灾+备份。
+
+- **备份** ： 将系统所产生的的所有重要数据多备份几份。
+- **容灾** ： 在异地建立两个完全相同的系统。当某个地方的系统突然挂掉，整个应用系统可以切换到另一个，这样系统就可以正常提供服务了。
+
+**异地多活** 描述的是将服务部署在异地并且服务同时对外提供服务。和传统的灾备设计的最主要区别在于“多活”，即所有站点都是同时在对外提供服务的。异地多活是为了应对突发状况比如火灾、地震等自然或者认为灾害。
+
+相关阅读：
+
+- [搞懂异地多活，看这篇就够了](https://mp.weixin.qq.com/s/T6mMDdtTfBuIiEowCpqu6Q)
+- [四步构建异地多活](https://mp.weixin.qq.com/s/hMD-IS__4JE5_nQhYPYSTg)
+- [《从零开始学架构》— 28 | 业务高可用的保障：异地多活架构](http://gk.link/a/10pKZ)
