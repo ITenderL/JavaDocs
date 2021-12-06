@@ -25,7 +25,7 @@
 
 ####  注意事项
 
-[Java 容器使用注意事项总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合使用注意事项.md)
+[Java 容器使用注意事项总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/java集合使用注意事项.md)
 
 #### 源码分析
 
