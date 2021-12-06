@@ -21,7 +21,7 @@
 
 #### 知识点/面试题
 
-[Java 集合常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合框架基础知识&面试题总结.md)
+[Java 集合总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/Java%E9%9B%86%E5%90%88%E5%9F%BA%E7%A1%80.md)
 
 ####  注意事项
 
