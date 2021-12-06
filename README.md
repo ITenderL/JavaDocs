@@ -3,7 +3,7 @@
 
 ### 基础
 
-**基础知识**：[Java 基础知识点/面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/java基础知识总结.md)
+**基础知识**：[Java 基础知识](docs/Java/jvm/Java基础.md)
 
 **重要知识点详解：**
 
