@@ -25,7 +25,7 @@
 
 ####  注意事项
 
-[Java 容器使用注意事项总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/java集合使用注意事项.md)
+[Java 容器使用注意事项](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/%E9%9B%86%E5%90%88%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md)
 
 #### 源码分析
 
