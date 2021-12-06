@@ -1,9 +1,9 @@
-# ITender JavaDocs
-## Java
-
+# JavaDocs
 ### 基础
 
-**基础知识**：[Java 基础知识](docs/Java/jvm/Java基础.md)
+***
+
+**基础知识**：[Java 基础知识](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/jvm/Java%E5%9F%BA%E7%A1%80.md)
 
 **重要知识点详解：**
 
@@ -14,11 +14,15 @@
 
 ### 集合
 
-1. **[Java 集合常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合框架基础知识&面试题总结.md)** (必看 👍)
+***
+
+1. **[Java 集合常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合框架基础知识&面试题总结.md)** 
 2. [Java 容器使用注意事项总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/java集合使用注意事项.md)
 3. **源码分析** ：[ArrayList 源码+扩容机制分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/arraylist-source-code.md) 、[HashMap(JDK1.8)源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/hashmap-source-code.md) 、[ConcurrentHashMap 源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/concurrent-hash-map-source-code.md)
 
 ### 并发
+
+***
 
 **知识点/面试题:** (必看 👍)
 
@@ -34,7 +38,9 @@
 5. [AQS 原理以及 AQS 同步组件总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/aqs原理以及aqs同步组件总结.md)
 6. [CompletableFuture入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/completablefuture-intro.md)
 
-### JVM (必看 👍)
+### JVM 
+
+***
 
 JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html)和周志明老师的[《深入理解Java虚拟机（第3版）》](https://book.douban.com/subject/34907497/) （强烈建议阅读多遍！）。
 
@@ -47,7 +53,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 7. **[【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)**
 8. **[【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)**
 
-### 新特性
+### Java新特性
 
 1. **Java 8** ：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
 2. **Java9~Java15** : [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
