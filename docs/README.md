@@ -39,17 +39,21 @@
 
 #### Java并发编程
 
-1. [Java 并发基础](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/concurrent/java并发基础.md)
-2. [Java 并发进阶](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/concurrent/java并发进阶.md)
+* [Java 并发基础](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/concurrent/java并发基础.md)
+
+* [Java 并发进阶](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/concurrent/java并发进阶.md)
 
 #### 重要知识点详解
 
-1. **线程池**：[Java 线程池学习总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java线程池学习总结.md)、[拿来即用的 Java 线程池最佳实践](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/拿来即用的java线程池最佳实践.md)
-2. [ThreadLocal 关键字解析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/threadlocal.md)
-3. [Java 并发容器总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/并发容器总结.md)
-4. [Atomic 原子类总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/atomic原子类总结.md)
-5. [AQS 原理以及 AQS 同步组件总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/aqs原理以及aqs同步组件总结.md)
-6. [CompletableFuture入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/completablefuture-intro.md)
+* 线程池：[Java 线程池学习总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java线程池学习总结.md)、[拿来即用的 Java 线程池最佳实践](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/拿来即用的java线程池最佳实践.md)
+
+* [ThreadLocal 关键字解析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/threadlocal.md)
+
+* [Java 并发容器总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/并发容器总结.md)
+
+* [Atomic 原子类总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/atomic原子类总结.md)
+
+* [AQS 原理以及 AQS 同步组件总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/aqs原理以及aqs同步组件总结.md)
 
 ### JVM 
 
@@ -57,28 +61,37 @@
 
 JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html)和周志明老师的[《深入理解Java虚拟机（第3版）》](https://book.douban.com/subject/34907497/) （强烈建议阅读多遍！）。
 
-1. **[Java 内存区域](https://javaguide.cn/java/jvm/jvm-garbage-collection/)**
-2. **[JVM 垃圾回收](https://javaguide.cn/java/jvm/jvm-garbage-collection/)**
-3. [JDK 监控和故障处理工具](https://javaguide.cn/java/jvm/jdk-monitoring-and-troubleshooting-tools/)
-4. [类文件结构](https://javaguide.cn/java/jvm/class-file-structure/)
-5. **[类加载过程](https://javaguide.cn/java/jvm/class-loading-process/)**
-6. [类加载器](https://javaguide.cn/java/jvm/classloader/)
-7. **[【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)**
-8. **[【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)**
+* [Java 内存区域](https://javaguide.cn/java/jvm/jvm-garbage-collection/)
+
+* [JVM 垃圾回收](https://javaguide.cn/java/jvm/jvm-garbage-collection/)
+
+* [JDK 监控和故障处理工具](https://javaguide.cn/java/jvm/jdk-monitoring-and-troubleshooting-tools/)
+
+* [类文件结构](https://javaguide.cn/java/jvm/class-file-structure/)
+
+* [类加载过程](https://javaguide.cn/java/jvm/class-loading-process/)
+
+* [类加载器](https://javaguide.cn/java/jvm/classloader/)
+
+* [【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)
+
+* [【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)
 
 ### Java新特性
 
 ***
 
-1. **Java 8** ：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
-2. **Java9~Java15** : [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
+* Java 8*：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
+
+* Java9~Java15: [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
 
 ### 小技巧
 
 ***
 
-1. [JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
-2. [手把手教你定位常见 Java 性能问题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/locate-performance-problems/手把手教你定位常见Java性能问题.md)
+* [JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
+
+* [手把手教你定位常见 Java 性能问题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/locate-performance-problems/手把手教你定位常见Java性能问题.md)
 
 ## 计算机基础
 
@@ -88,16 +101,19 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ***
 
-1. [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
-2. [后端程序员必备的 Linux 基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/linux-intro.md)
-3. [Shell 编程入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/shell-intro.md)
+* [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
+
+* [后端程序员必备的 Linux 基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/linux-intro.md)
+
+* [Shell 编程入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/shell-intro.md)
 
 ### 网络
 
 ***
 
-1. [计算机网络常见面试题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/计算机网络常见面试题.md)
-2. [谢希仁老师的《计算机网络》内容总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/谢希仁老师的《计算机网络》内容总结.md)
+* [计算机网络常见面试题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/计算机网络常见面试题.md)
+
+* [谢希仁老师的《计算机网络》内容总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/谢希仁老师的《计算机网络》内容总结.md)
 
 ### 数据结构
 
@@ -105,14 +121,17 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 **图解数据结构：**
 
-1. [线性数据结构 :数组、链表、栈、队列](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/线性数据结构.md)
-2. [图](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/图.md)
-3. [堆](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/堆.md)
-4. [树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/树.md) ：重点关注[红黑树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/红黑树.md)、B-，B+，B*树、LSM树
+* [线性数据结构 :数组、链表、栈、队列](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/线性数据结构.md)
+
+* [图](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/图.md)
+
+* [堆](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/堆.md)
+
+* [树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/树.md) ：重点关注[红黑树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/红黑树.md)、B-，B+，B*树、LSM树
 
 其他常用数据结构 ：
 
-1. [布隆过滤器](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/bloom-filter.md)
+* [布隆过滤器](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/bloom-filter.md)
 
 ### 算法
 
@@ -139,25 +158,35 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 **总结：**
 
-1. [数据库基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/数据库基础知识.md)
-2. **[MySQL知识点总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql知识点&面试题总结.md)** (必看 👍)
-3. [一千行 MySQL 学习笔记](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/a-thousand-lines-of-mysql-study-notes.md)
-4. [MySQL 高性能优化规范建议](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-high-performance-optimization-specification-recommendations.md)
+* [数据库基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/数据库基础知识.md)
+
+* [MySQL知识点总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql知识点&面试题总结.md)
+
+* [一千行 MySQL 学习笔记](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/a-thousand-lines-of-mysql-study-notes.md)
+
+* [MySQL 高性能优化规范建议](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-high-performance-optimization-specification-recommendations.md)
 
 **重要知识点：**
 
-1. [MySQL数据库索引总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-index.md)
-2. [事务隔离级别(图文详解)](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/transaction-isolation-level.md)
-3. [MySQL三大日志(binlog、redo log和undo log)详解](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-logs.md)
-4. [InnoDB存储引擎对MVCC的实现](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/innodb-implementation-of-mvcc.md)
-5. [一条 SQL 语句在 MySQL 中如何被执行的?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/how-sql-executed-in-mysql.md)
-6. [字符集详解：为什么不建议在MySQL中使用 utf8 ？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/字符集.md)
-7. [关于数据库中如何存储时间的一点思考](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/some-thoughts-on-database-storage-time.md)
+* [MySQL数据库索引总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-index.md)
+
+* [事务隔离级别(图文详解)](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/transaction-isolation-level.md)
+
+* [MySQL三大日志(binlog、redo log和undo log)详解](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-logs.md)
+
+* [InnoDB存储引擎对MVCC的实现](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/innodb-implementation-of-mvcc.md)
+
+* [一条 SQL 语句在 MySQL 中如何被执行的?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/how-sql-executed-in-mysql.md)
+
+* [字符集详解：为什么不建议在MySQL中使用 utf8 ？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/字符集.md)
+
+* [关于数据库中如何存储时间的一点思考](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/some-thoughts-on-database-storage-time.md)
 
 ### Redis
 
-1. [Redis 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/redis知识点&面试题总结.md)
-2. [3种常用的缓存读写策略](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/3-commonly-used-cache-read-and-write-strategies.md)
+* [Redis 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/redis知识点&面试题总结.md)
+
+* [3种常用的缓存读写策略](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/redis/3-commonly-used-cache-read-and-write-strategies.md)
 
 ## 搜索引擎
 
@@ -187,15 +216,19 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 **知识点/面试题:**
 
-1. **[Spring 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring常见问题总结.md)**
-2. **[SpringBoot 入门指南](https://github.com/Snailclimb/springboot-guide)**
+* [Spring 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring常见问题总结.md)
+
+* [SpringBoot 入门指南](https://github.com/Snailclimb/springboot-guide)
 
 **重要知识点详解：**
 
-1. **[Spring/Spring Boot 常用注解总结！安排！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring&SpringBoot常用注解总结.md)**
-2. **[Spring 事务总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring事务总结.md)**
-3. [Spring 中都用到了那些设计模式?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring设计模式总结.md)
-4. **[SpringBoot 自动装配原理？”](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/SpringBoot自动装配原理.md)**
+* [Spring/Spring Boot 常用注解总结！安排！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring&SpringBoot常用注解总结.md)
+
+* [Spring 事务总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring事务总结.md)
+
+* [Spring 中都用到了那些设计模式?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring设计模式总结.md)
+
+* [SpringBoot 自动装配原理？”](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/SpringBoot自动装配原理.md)**
 
 #### MyBatis
 
