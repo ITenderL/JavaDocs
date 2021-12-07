@@ -19,7 +19,7 @@
 
 ***
 
-#### 知识点/面试题
+#### Java集合
 
 [Java 集合总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/Java%E9%9B%86%E5%90%88%E5%9F%BA%E7%A1%80.md)
 
@@ -29,18 +29,18 @@
 
 #### 源码分析
 
-* [ArrayList 源码+扩容机制分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/arraylist-source-code.md) 
-* [HashMap(JDK1.8)源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/hashmap-source-code.md) 
-* [ConcurrentHashMap 源码+底层数据结构分析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/concurrent-hash-map-source-code.md)
+* [ArrayList 扩容机制+源码](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/arraylist-source-code.md) 
+* [HashMap(JDK1.8)底层结构+源码](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/hashmap-source-code.md) 
+* [ConcurrentHashMap 底层结构+源码](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/concurrent-hash-map-source-code.md)
 
 ### 并发编程
 
 ***
 
-#### 知识点/面试题
+#### Java并发编程
 
-1. **[Java 并发基础常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java并发基础常见面试题总结.md)**
-2. **[Java 并发进阶常见面试题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java并发进阶常见面试题总结.md)**
+1. [Java 并发基础](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/concurrent/java并发基础.md)
+2. [Java 并发进阶](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/concurrent/java并发进阶.md)
 
 #### 重要知识点详解
 
