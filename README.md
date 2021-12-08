@@ -4,7 +4,7 @@
 
 #### 基础知识
 
-* [Java 基础知识](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/basic/Java%E5%9F%BA%E7%A1%80.md)
+* [Java 基础知识](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/basis/Java%E5%9F%BA%E7%A1%80.md)
 
 #### 重要知识详解
 
