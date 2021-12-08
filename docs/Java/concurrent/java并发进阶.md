@@ -817,7 +817,7 @@ public void execute(Runnable command) {
 
 **AtomicInteger 类常用方法**
 
-```
+```java
 public final int get() //获取当前的值
 public final int getAndSet(int newValue)//获取当前的值，并设置新的值
 public final int getAndIncrement()//获取当前的值，并自增
@@ -831,7 +831,7 @@ public final void lazySet(int newValue)//最终设置为newValue,使用 lazySet 
 
 使用 AtomicInteger 之后，不用对 increment() 方法加锁也可以保证线程安全。
 
-```
+```java
 class AtomicIntegerTest {
     private AtomicInteger count = new AtomicInteger();
     //使用AtomicInteger之后，不需要对该方法加锁，也可以实现线程安全。
@@ -851,7 +851,7 @@ AtomicInteger 线程安全原理简单分析
 
 AtomicInteger 类的部分源码：
 
-```
+```java
 // setup to use Unsafe.compareAndSwapInt for updates（更新操作时提供“比较并替换”的作用）
 private static final Unsafe unsafe = Unsafe.getUnsafe();
 private static final long valueOffset;
@@ -902,13 +902,13 @@ AQS 原理这部分参考了部分博客，在 5.2 节末尾放了链接。
 
 AQS 使用一个 int 成员变量来表示同步状态，通过内置的 FIFO 队列来完成获取资源线程的排队工作。AQS 使用 CAS 对该同步状态进行原子操作实现对其值的修改。
 
-```
+```java
 private volatile int state;//共享变量，使用volatile修饰保证线程可见性
 ```
 
 状态信息通过 protected 类型的 getState，setState，compareAndSetState 进行操作
 
-```
+```java
 //返回同步状态的当前值
 protected final int getState() {
     return state;
@@ -933,7 +933,7 @@ protected final boolean compareAndSetState(int expect, int update) {
 
    
 
-  ```
+  ```java
   ReentrantLock
   ```
 
@@ -959,7 +959,7 @@ protected final boolean compareAndSetState(int expect, int update) {
 
 **AQS 使用了模板方法模式，自定义同步器时需要重写下面几个 AQS 提供的模板方法：**
 
-```
+```java
 isHeldExclusively()//该线程是否正在独占资源。只有用到condition才需要去实现它。
 tryAcquire(int)//独占方式。尝试获取资源，成功则返回true，失败则返回false。
 tryRelease(int)//独占方式。尝试释放资源，成功则返回true，失败则返回false。
@@ -996,7 +996,7 @@ tryReleaseShared(int)//共享方式。尝试释放资源，成功则返回true�
 
 伪代码是下面这样的：
 
-```
+```java
 public class CountDownLatchExample1 {
     // 处理文件的数量
     private static final int threadCount = 6;
@@ -1031,7 +1031,7 @@ public class CountDownLatchExample1 {
 
 可以使用 `CompletableFuture` 类来改进！Java8 的 `CompletableFuture` 提供了很多对多线程友好的方法，使用它可以很方便地为我们编写多线程程序，什么异步、串行、并行或者等待所有线程执行完任务什么的都非常方便。
 
-```
+```java
 CompletableFuture<Void> task1 =
     CompletableFuture.supplyAsync(()->{
         //自定义业务操作
@@ -1054,7 +1054,7 @@ System.out.println("all done. ");
 
 上面的代码还可以接续优化，当任务过多的时候，把每一个 task 都列出来不太现实，可以考虑通过循环来添加任务。
 
-```
+```java
 //文件夹位置
 List<String> filePaths = Arrays.asList(...)
 // 异步处理所有文件
@@ -1067,4 +1067,3 @@ CompletableFuture<Void> allFutures = CompletableFuture.allOf(
 );
 ```
 
-## 
