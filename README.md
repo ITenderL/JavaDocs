@@ -2,8 +2,6 @@
 
 ### 基础
 
-***
-
 #### 基础知识
 
 * [Java 基础知识](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/basic/Java%E5%9F%BA%E7%A1%80.md)
@@ -16,8 +14,6 @@
 - [常见的 IO 模型有哪些？Java 中的 BIO、NIO、AIO 有啥区别?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/java基础知识总结)
 
 ### 集合
-
-***
 
 #### Java集合
 
@@ -34,8 +30,6 @@
 * [ConcurrentHashMap 底层结构+源码](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/collection/concurrent-hash-map-source-code.md)
 
 ### 并发编程
-
-***
 
 #### Java并发编程
 
@@ -57,49 +51,34 @@
 
 ### JVM 
 
-***
+#### JVM内存区域
+
+* [Java 内存区域](https://javaguide.cn/java/jvm/jvm-garbage-collection/)
+* [JVM 垃圾回收](https://javaguide.cn/java/jvm/jvm-garbage-collection/)
+* [JDK 监控和故障处理工具](https://javaguide.cn/java/jvm/jdk-monitoring-and-troubleshooting-tools/)
+* [类文件结构](https://javaguide.cn/java/jvm/class-file-structure/)
+* [类加载过程](https://javaguide.cn/java/jvm/class-loading-process/)
+* [类加载器](https://javaguide.cn/java/jvm/classloader/)
+* [【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)
+* [【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)
 
 JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html)和周志明老师的[《深入理解Java虚拟机（第3版）》](https://book.douban.com/subject/34907497/) （强烈建议阅读多遍！）。
 
-* [Java 内存区域](https://javaguide.cn/java/jvm/jvm-garbage-collection/)
-
-* [JVM 垃圾回收](https://javaguide.cn/java/jvm/jvm-garbage-collection/)
-
-* [JDK 监控和故障处理工具](https://javaguide.cn/java/jvm/jdk-monitoring-and-troubleshooting-tools/)
-
-* [类文件结构](https://javaguide.cn/java/jvm/class-file-structure/)
-
-* [类加载过程](https://javaguide.cn/java/jvm/class-loading-process/)
-
-* [类加载器](https://javaguide.cn/java/jvm/classloader/)
-
-* [【待完成】最重要的 JVM 参数总结（翻译完善了一半）](https://javaguide.cn/java/jvm/jvm-parameters-intro/)
-
-* [【加餐】大白话带你认识 JVM](https://javaguide.cn/java/jvm/jvm-intro/)
-
 ### Java新特性
 
-***
-
-* Java 8*：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
+* Java 8：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
 
 * Java9~Java15: [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
 
 ### 小技巧
 
-***
-
-* [JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
+* JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
 
 * [手把手教你定位常见 Java 性能问题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/locate-performance-problems/手把手教你定位常见Java性能问题.md)
 
 ## 计算机基础
 
-👉 **[图解计算机基础 PDF 下载](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=100021725&idx=1&sn=2db9664ca25363139a81691043e9fd8f&chksm=4ea19a1679d61300d8990f7e43bfc7f476577a81b712cf0f9c6f6552a8b219bc081efddb5c54#rd)** 。
-
 ### 操作系统
-
-***
 
 * [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
 
@@ -117,9 +96,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ### 数据结构
 
-***
-
-**图解数据结构：**
+#### 图解数据结构
 
 * [线性数据结构 :数组、链表、栈、队列](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/线性数据结构.md)
 
@@ -135,8 +112,6 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ### 算法
 
-***
-
 算法这部分内容非常重要，如果你不知道如何学习算法的话，可以看下我写的：
 
 - [算法学习书籍+资源推荐](https://www.zhihu.com/question/323359308/answer/1545320858) 。
@@ -151,8 +126,6 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 另外，[GeeksforGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/) 这个网站总结了常见的算法 ，比较全面系统。
 
 ## 数据库
-
-***
 
 ### MySQL
 
