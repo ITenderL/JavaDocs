@@ -88,8 +88,6 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ### 网络
 
-***
-
 * [计算机网络常见面试题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/计算机网络常见面试题.md)
 
 * [谢希仁老师的《计算机网络》内容总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/谢希仁老师的《计算机网络》内容总结.md)

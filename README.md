@@ -81,14 +81,10 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 ### 操作系统
 
 * [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
-
 * [后端程序员必备的 Linux 基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/linux-intro.md)
-
 * [Shell 编程入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/shell-intro.md)
 
 ### 网络
-
-***
 
 * [计算机网络常见面试题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/network/计算机网络常见面试题.md)
 
