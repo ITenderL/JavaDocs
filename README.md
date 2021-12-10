@@ -39,14 +39,11 @@
 
 #### 重要知识点详解
 
-* 线程池：[Java 线程池学习总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java线程池学习总结.md)、[拿来即用的 Java 线程池最佳实践](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/拿来即用的java线程池最佳实践.md)
-
+* [Java 线程池学习总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/java线程池学习总结.md)
+* [拿来即用的 Java 线程池最佳实践](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/拿来即用的java线程池最佳实践.md)
 * [ThreadLocal 关键字解析](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/threadlocal.md)
-
 * [Java 并发容器总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/并发容器总结.md)
-
 * [Atomic 原子类总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/atomic原子类总结.md)
-
 * [AQS 原理以及 AQS 同步组件总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/concurrent/aqs原理以及aqs同步组件总结.md)
 
 ### JVM 
@@ -73,15 +70,20 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 ### 小技巧
 
 * JAD 反编译](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/JAD反编译tricks.md)
-
 * [手把手教你定位常见 Java 性能问题](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/tips/locate-performance-problems/手把手教你定位常见Java性能问题.md)
+
+## 设计模式
+
+[Java设计模式]()
 
 ## 计算机基础
 
 ### 操作系统
 
 * [操作系统常见问题总结！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/操作系统常见面试题&知识点总结.md)
+
 * [后端程序员必备的 Linux 基础知识总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/linux-intro.md)
+
 * [Shell 编程入门](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/operating-system/shell-intro.md)
 
 ### 网络
@@ -102,13 +104,9 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 * [树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/树.md) ：重点关注[红黑树](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/红黑树.md)、B-，B+，B*树、LSM树
 
-其他常用数据结构 ：
-
 * [布隆过滤器](https://github.com/Snailclimb/JavaGuide/blob/main/docs/cs-basics/data-structure/bloom-filter.md)
 
 ### 算法
-
-算法这部分内容非常重要，如果你不知道如何学习算法的话，可以看下我写的：
 
 - [算法学习书籍+资源推荐](https://www.zhihu.com/question/323359308/answer/1545320858) 。
 - [如何刷Leetcode?](https://www.zhihu.com/question/31092580/answer/1534887374)
