@@ -49,7 +49,7 @@
 3. 分析top sql，进行explain调试，查看语句执行时间。
 4. 调整索引或语句本身。
 
-## SQL语句索引优化
+## 索引优化
 
 ### 查看SQL执行频率
 
@@ -488,9 +488,7 @@ select * from tb_seller where name like '%黑马程序员';
 
 ![index-like模糊查询](images/index/index-like模糊查询.png)
 
- 解决方案 ： 
-
-通过覆盖索引来解决 
+ **解决方案 ： 通过覆盖索引来解决 **
 
 ![img](images/index/idx-覆盖索引-模糊查询.png)**9.如果MySQL评估使用索引比全表更慢，则不使用索引。**
 
@@ -498,9 +496,25 @@ select * from tb_seller where name like '%黑马程序员';
 
 **10.is  NULL ， is NOT NULL  有时索引失效。**
 
+```sql
+explain SELECT * FROM tb_item_cat where name is null;
+
+explain SELECT * FROM tb_item_cat where name is not null;
+
+explain SELECT * FROM tb_user where name is null;
+
+explain SELECT * FROM tb_user where name is not null;
+```
+
 ![index-isNull](images/index/index-isNull.png)
 
 **11.in 走索引， not in 索引失效。**
+
+```java
+explain SELECT * FROM tb_seller where sellerid in ('oppo', 'xiaomi', 'sina');
+
+explain SELECT * FROM tb_seller where sellerid not in ('oppo', 'xiaomi', 'sina');
+```
 
 ![index-in](images/index/index-in.png)
 
@@ -530,7 +544,10 @@ create index idx_seller_address on tb_seller(address);
 
 #### 查看索引的使用
 
-show status like 'Handler_read%';	 show global status like 'Handler_read%';	
+```sql
+show status like 'Handler_read%';	 
+show global status like 'Handler_read%';	
+```
 
 ![img](images/index/idx-查看索引使用.png)
 
@@ -542,3 +559,372 @@ Handler_read_rnd ：根据固定位置读一行的请求数。如果你正执行
 Handler_read_rnd_next：在数据文件中读下一行的请求数。如果你正进行大量的表扫描，该值较高。通常说明你的表索引不正确或写入的查询没有利用索引。
 ```
 
+## SQL语句优化
+
+### 批量插入优化
+
+准备环境：
+
+```sql
+CREATE TABLE `tb_user_2` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(96) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `sex` char(1) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `qq` varchar(32) DEFAULT NULL,
+  `status` varchar(32) NOT NULL COMMENT '用户状态',
+  `create_time` datetime NOT NULL,
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_user_username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+```
+
+对于 InnoDB 类型的表，有以下几种方式可以提高导入的效率：
+
+**1.主键顺序插入**
+
+因为InnoDB类型的表是按照主键的顺序保存的，所以将导入的数据按照主键的顺序排列，可以有效的提高导入数据的效率。如果InnoDB表没有主键，那么系统会自动默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这点，来提高导入数据的效率。
+
+脚本文件介绍 : sql1.log  ----> 主键有序 ,sql2.log  ----> 主键无序
+
+插入ID顺序排列数据：
+
+![img](images/SQL优化/insert-id有序.png)
+
+插入ID无序排列数据：
+
+![img](images/SQL优化/insert-id无序.png)
+
+**2.关闭唯一性校验**
+
+在导入数据前执行 `SET UNIQUE_CHECKS=0`，关闭唯一性校验，在导入结束后执行`SET UNIQUE_CHECKS=1`，恢复唯一性校验，可以提高导入的效率。
+
+![img](images/SQL优化/insert-关闭唯一校验.png)
+
+**3.手动提交事务**
+
+如果应用使用自动提交的方式，建议在导入前执行 `SET AUTOCOMMIT=0`，关闭自动提交，导入结束后再执行 `SET AUTOCOMMIT=1`，打开自动提交，也可以提高导入的效率。
+
+![img](images/SQL优化/insert-手动提交事务.png)
+
+**5.2 优化insert语句**
+
+当进行数据的insert操作的时候，可以考虑采用以下几种优化方案。
+
+- 如果需要同时对一张表插入很多行数据时，应该尽量使用多个值表的insert语句，这种方式将大大的缩减客户端与数据库之间的连接、关闭等消耗。使得效率比分开执行的单个insert语句快。
+
+示例， 原始方式为：
+
+```sql
+insert into tb_test values(1,'Tom'); 
+insert into tb_test values(2,'Cat'); 
+insert into tb_test values(3,'Jerry');
+```
+
+优化后的方案为 ： 
+
+```sql
+insert into tb_test values(1,'Tom'), (2,'Cat'), (3,'Jerry');
+```
+
+- 在事务中进行数据插入。
+
+```sql
+start transaction; 
+insert into tb_test values(1,'Tom'); 
+insert into tb_test values(2,'Cat'); 
+insert into tb_test values(3,'Jerry'); 
+commit;
+```
+
+- 数据有序插入
+
+```sql
+insert into tb_test values(4,'Tim'); 
+insert into tb_test values(1,'Tom'); 
+insert into tb_test values(3,'Jerry'); 
+insert into tb_test values(5,'Rose'); 
+insert into tb_test values(2,'Cat');
+```
+
+优化后
+
+```sql
+insert into tb_test values(1,'Tom'); 
+insert into tb_test values(2,'Cat'); 
+insert into tb_test values(3,'Jerry'); 
+insert into tb_test values(4,'Tim'); 
+insert into tb_test values(5,'Rose');
+```
+
+### 优化order by语句
+
+环境准备:
+
+```sql
+CREATE TABLE `emp` (  
+    `id` int(11) NOT NULL AUTO_INCREMENT,  
+    `name` varchar(100) NOT NULL,  
+    `age` int(3) NOT NULL,  
+    `salary` int(11) DEFAULT NULL,  
+    PRIMARY KEY (`id`) 
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4; 
+
+insert into `emp` (`id`, `name`, `age`, `salary`) values('1','Tom','25','2300'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('2','Jerry','30','3500'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('3','Luci','25','2800'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('4','Jay','36','3500'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('5','Tom2','21','2200'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('6','Jerry2','31','3300'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('7','Luci2','26','2700'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('8','Jay2','33','3500'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('9','Tom3','23','2400'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('10','Jerry3','32','3100'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('11','Luci3','26','2900'); 
+insert into `emp` (`id`, `name`, `age`, `salary`) values('12','Jay3','37','4500'); 
+-- 创建索引
+create index idx_emp_age_salary on emp(age, salary);
+```
+
+**两种排序方式**
+
+1. 第一种是通过对返回数据进行排序，也就是通常说的 filesort 排序，所有不是通过索引直接返回排序结果的排序都叫 FileSort 排序。
+
+```sql
+explain select * from emp order by age desc;
+
+explain select * from emp order by age asc;
+```
+
+![img](images/SQL优化/orderby-filesort.png)
+
+2. 第二种通过有序索引顺序扫描直接返回有序数据，这种情况即为 using index，不需要额外排序，操作效率高。
+
+```sql
+explain select id from emp order by age asc;
+
+explain select id, age from emp order by age asc;
+
+explain select id, age, salary from emp order by age asc;
+```
+
+![img](images/SQL优化/order-idx.png)
+
+多字段排序
+
+```sql
+explain select id, age, salary from emp order by age, salary;
+
+explain select id, age, salary from emp order by age desc, salary desc;
+
+explain select id, age, salary from emp order by salary desc, age desc;
+
+explain select id, age, salary from emp order by age desc, salary asc;
+```
+
+![img](images/SQL优化/orderby-多字段.png)
+
+了解了MySQL的排序方式，优化目标就清晰了：
+
+尽量减少额外的排序，通过索引直接返回有序数据。where 条件和Order by 使用相同的索引，并且Order By 的顺序和索引顺序相同， 并且Order  by 的字段都是升序，或者都是降序。否则肯定需要额外的操作，这样就会出现FileSort。
+
+**Filesort 的优化**
+
+通过创建合适的索引，能够减少 Filesort 的出现，但是在某些情况下，条件限制不能让Filesort消失，那就需要加快 Filesort的排序操作。对于Filesort ， MySQL 有两种排序算法：
+
+1） 两次扫描算法 ：MySQL4.1 之前，使用该方式排序。首先根据条件取出排序字段和行指针信息，然后在排序区 sort buffer 中排序，如果sort buffer不够，则在临时表 temporary table 中存储排序结果。完成排序之后，再根据行指针回表读取记录，该操作可能会导致大量随机I/O操作。
+
+2）一次扫描算法：一次性取出满足条件的所有字段，然后在排序区 sort  buffer 中排序后直接输出结果集。排序时内存开销较大，但是排序效率比两次扫描算法要高。
+
+MySQL 通过比较系统变量 `max_length_for_sort_data` 的大小和Query语句取出的字段总大小， 来判定是否那种排序算法，如果`max_length_for_sort_data` 更大，那么使用第二种优化之后的算法；否则使用第一种。
+
+可以适当提高 `sort_buffer_size`  和 `max_length_for_sort_data`  系统变量，来增大排序区的大小，提高排序的效率。
+
+```sql
+show variables like 'max_length_for_sort_data';
+
+show variables like 'sort_buffer_size';
+```
+
+![img](images/SQL优化/orderby-filesort优化.png)
+
+### 优化group by 语句
+
+由于GROUP BY 实际上也同样会进行排序操作，而且与ORDER BY 相比，GROUP BY 主要只是多了排序之后的分组操作。当然，如果在分组的时候还使用了其他的一些聚合函数，那么还需要一些聚合函数的计算。所以，在GROUP BY 的实现过程中，与 ORDER BY 一样也可以利用到索引。
+
+如果查询包含 group by 但是用户想要避免排序结果的消耗， 则可以执行order by null 禁止排序。如下 ：
+
+```sql
+drop index idx_emp_age_salary on emp; 
+
+explain select age,count(*) from emp group by age;
+```
+
+![img](images/SQL优化/groupby-优化01.png)
+
+优化后
+
+```sql
+explain select age,count(*) from emp group by age order by null;
+```
+
+![img](images/SQL优化/groupby-优化02.png)
+
+从上面的例子可以看出，第一个SQL语句需要进行"filesort"，而第二个SQL由于order  by  null 不需要进行 "filesort"， 而上文提过Filesort往往非常耗费时间。
+
+创建索引 ：
+
+```sql
+create index idx_emp_age_salary on emp(age,salary);
+```
+
+![img](images/SQL优化/groupby-优化03.png)
+
+### 优化嵌套查询
+
+Mysql4.1版本之后，开始支持SQL的子查询。这个技术可以使用SELECT语句来创建一个单列的查询结果，然后把这个结果作为过滤条件用在另一个查询中。使用子查询可以一次性的完成很多逻辑上需要多个步骤才能完成的SQL操作，同时也可以避免事务或者表锁死，并且写起来也很容易。但是，有些情况下，子查询是可以被更高效的连接（JOIN）替代。
+
+示例 ，查找有角色的所有的用户信息 : 
+
+ ```sql
+explain select * from t_user where id in (select user_id from user_role );
+ ```
+
+执行计划为 : 
+
+![img](images/SQL优化/嵌套优化-01.png)
+
+优化后 :
+
+```sql
+explain select * from t_user u , user_role ur where u.id = ur.user_id;s
+```
+
+![img](images/SQL优化/嵌套优化02.png)
+
+连接(Join)查询之所以更有效率一些 ，是因为MySQL不需要在内存中创建临时表来完成这个逻辑上需要两个步骤的查询工作。
+
+### 优化OR条件
+
+对于包含OR的查询子句，如果要利用索引，则OR之间的每个条件列都必须用到索引 ， 而且不能使用到复合索引； 如果没有索引，则应该考虑增加索引。
+
+获取 emp 表中的所有的索引 ： 
+
+```sql
+show index from emp;
+```
+
+![img](images/SQL优化/or-优化01.png)
+
+示例 ： 
+
+```sql
+explain select * from emp where id = 1 or age = 30;
+```
+
+![img](images/SQL优化/or优化02.png)
+
+![img](images/SQL优化/or优化03.png)
+
+**建议使用 union 替换 or ** 
+
+![img](images/SQL优化/or优化04.png)
+
+我们来比较下重要指标，发现主要差别是 type 和 ref 这两项
+
+type 显示的是访问类型，是较为重要的一个指标，结果值从好到坏依次是：
+
+```text
+system > const > eq_ref > ref > fulltext > ref_or_null  > index_merge > unique_subquery > index_subquery > range > index > ALL
+```
+
+`UNION` 语句的 type 值为 ref，OR 语句的 type 值为 range，可以看到这是一个很明显的差距
+
+`UNION` 语句的 ref 值为 const，OR 语句的 type 值为 null，const 表示是常量值引用，非常快
+
+这两项的差距就说明了 UNION 要优于 OR 
+
+### 分页查询优化
+
+一般分页查询时，通过创建覆盖索引能够比较好地提高性能。一个常见又非常头疼的问题就是 limit 2000000,10  ，此时需要MySQL排序前2000010 记录，仅仅返回2000000 - 2000010 的记录，其他记录丢弃，查询排序的代价非常大 。
+
+```sql
+explain select * from tb_item limit 2000000, 10;
+```
+
+![img](images/SQL优化/page-优化.png)
+
+**优化思路一（子查询）**
+
+在索引上完成排序分页操作，最后根据主键关联回原表查询所需要的其他列内容。
+
+```sql
+explain select * from tb_item t, (select id from tb_item order by id limit 2000000, 10) a where t.id = a.id limit 2000000, 10;
+```
+
+![img](images/SQL优化/page-subquery.png)
+
+**优化思路二(主键自增)**
+
+```sql
+explain select * from tb_item  where id > 1000000 10;
+
+explain select * from tb_item  where id between 1000000 and 1000010;
+```
+
+该方案适用于主键自增的表，可以把Limit 查询转换成某个位置的查询 。
+
+![img](images/SQL优化/page-autoincr.png)
+
+### 使用SQL提示
+
+SQL提示，是优化数据库的一个重要手段，简单来说，就是在SQL语句中加入一些人为的提示来达到优化操作的目的。
+
+### USE INDEX
+
+在查询语句中表名的后面，添加 use index 来提供希望MySQL去参考的索引列表，就可以让MySQL不再考虑其他可用的索引。
+
+```sql
+create index idx_seller_name on tb_seller(name);
+
+explain select * from tb_seller where name = '小米科技';
+
+explain select * from tb_seller use index(idx_seller_name) where name = '小米科技'; 
+```
+
+![img](images/SQL优化/use-index.png)
+
+### IGNORE INDEX
+
+如果用户只是单纯的想让MySQL忽略一个或者多个索引，则可以使用 ignore index 作为 hint 。
+
+```sql
+ explain select * from tb_seller ignore index(idx_seller_name) where name = '小米科技';
+ 
+ explain select * from tb_seller ignore index(idx_seller_name_sta_address) where name = '小米科技';
+```
+
+![img](images/SQL优化/ignoreindex.png)
+
+### FORCE INDEX
+
+为强制MySQL使用一个特定的索引，可在查询中使用 force index 作为hint 。 
+
+```sql
+create index idx_seller_address on tb_seller(address);
+
+explain select * from tb_seller where address = '北京市';
+
+explain select * from tb_seller use index(idx_seller_address) where address = '北京市';
+
+explain select * from tb_seller force index(idx_seller_address) where address = '北京市';
+```
+
+![img](images/SQL优化/force-index.png)
+
+ 
