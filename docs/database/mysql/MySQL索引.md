@@ -62,35 +62,35 @@ BTree又叫多路平衡搜索树，一颗m叉的BTree特性如下：
 
 * 插入前4个字母 C N G A 
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/9881d65fc04c4986b884f019cef8d1b7/555944126588.png)
+![img](images/mysql索引/btree-01.png)
 
 * 插入H，n>4，中间元素G字母向上分裂到新的节点
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/862f1d33c737440b920f0473edb9834b/555944549825.png)
+![img](images/mysql索引/btree-02.png)
 
 * 插入E，K，Q不需要分裂
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/438d9433f32f49ed8ada379e4148747e/555944596893.png)
+![img](images/mysql索引/btree-03.png)
 
 * 插入M，中间元素M字母向上分裂到父节点G
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/9d67dddf86ff40528d3a815260e73e6f/555944652560.png)
+![img](images/mysql索引/btree-04.png)
 
 * 插入F，W，L，T不需要分裂
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/7ef7df2674e14ccd940ecd138271fbe0/555944686928.png)
+![img](images/mysql索引/btree-05.png)
 
 * 插入Z，中间元素T向上分裂到父节点中 
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/5845807cbf8e40bf86facd027908c6e5/555944713486.png)
+![img](images/mysql索引/btree-06.png)
 
 * 插入D，中间元素D向上分裂到父节点中。然后插入P，R，X，Y不需要分裂
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/fac05e6ca2894ecfbd39b7ebcd792caf/555944749984.png)
+![img](images/mysql索引/btree-07.png)
 
 * 最后插入S，NPQR节点n>5，中间节点Q向上分裂，但分裂后父节点DGMT的n>5，中间节点M向上分裂
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/6b232bde743a4837b03a64d7d9b6baee/555944848294.png)
+![img](images/mysql索引/btree-08.png)
 
 到此，该BTREE树就已经构建完成了， BTREE树 和 二叉树 相比， 查询数据的效率更高， 因为对于相同的数据量来说，BTREE的层级结构比二叉树小，因此搜索速度快。
 
@@ -102,7 +102,7 @@ B+Tree为BTree的变种，B+Tree与BTree的区别为：
 2.  B+Tree的叶子节点保存所有的key信息，依key大小顺序排列。
 3. 所有的非叶子节点都可以看作是key的索引部分。
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/1071f288d50349f29d4a084c1b3a136e/00001.jpeg)
+![img](images/mysql索引/b+tree01.jpeg)
 
 由于B+Tree只有叶子节点保存key信息，查询任何key都要从root走到叶子。所以B+Tree的查询效率更加稳定。
 
@@ -112,7 +112,7 @@ MySql索引数据结构对经典的B+Tree进行了优化。在原B+Tree的基础
 
 MySQL中的 B+Tree 索引结构示意图: 
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/59c37373bf2b42c798707de266c1c01b/555906287178.png)
+![img](images/mysql索引/b+tree02.png)
 
 #### B 树& B+树两者有何异同
 
@@ -301,7 +301,7 @@ CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX index_name [USING index_type] ON tbl_name
 
 示例 ： 为city表中的city_name字段创建索引 ；
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/bf625cec7b884b3a9c1a26acef563735/551438009843.png)
+![img](images/mysql索引/创建索引.png)
 
 #### 查看索引
 
@@ -311,15 +311,13 @@ CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX index_name [USING index_type] ON tbl_name
 show index from table_name;
 ```
 
-
-
 示例：查看city表中的索引信息；
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/b005355ada8a49ce9679cbbb5f7b6b05/551440511890.png)
+![img](images/mysql索引/查看索引.png)
 
 
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/89d62c49c3b74ee2a6e5d752d3cdd379/551440544483.png)
+![img](images/mysql索引/查看索引02.png)
 
 #### 删除索引
 
@@ -329,13 +327,9 @@ show index from table_name;
 DROP INDEX index_name ON tbl_name;
 ```
 
-
-
 示例 ： 想要删除city表上的索引idx_city_name，可以操作如下：
 
-![img](../../../../YouDaoYunNote/m13156447127@163.com/f01c1fb2212c413d9f9f206adea77e3a/551438238293.png)
-
- 	 
+![img](images/mysql索引/删除索引.png)	 
 
 ####  ALTER命令
 
