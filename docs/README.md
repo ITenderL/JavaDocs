@@ -74,7 +74,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ## 设计模式
 
-[Java设计模式]()
+[Java设计模式](https://github.com/ITenderness/JavaDocs/blob/main/docs/Java/design-pattern/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
 
 ## 计算机基础
 
