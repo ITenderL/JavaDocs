@@ -125,7 +125,8 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 * [数据库基础](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/数据库基础知识.md)
 * [MySQL索引](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/MySQL%E7%B4%A2%E5%BC%95.md)
-* [MySQL性能优化-索引优化](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/MySQL%E4%BC%98%E5%8C%96.md)
+* [MySQL性能优化-索引](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/MySQL%E4%BC%98%E5%8C%96.md)
+* [MySQL性能优化-表结构](表结构优化.md)
 * [MySQL知识点总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql知识点&面试题总结.md)
 * [一千行 MySQL 学习笔记](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/a-thousand-lines-of-mysql-study-notes.md)
 * [MySQL 高性能优化规范建议](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-high-performance-optimization-specification-recommendations.md)
