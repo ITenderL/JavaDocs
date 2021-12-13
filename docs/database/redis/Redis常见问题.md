@@ -91,7 +91,7 @@ public Object getObjectInclNullById(Integer id) {
 
 **布隆过滤器（Bloom Filter）**是一个叫做 Bloom 的老哥于1970年提出的。我们可以把它看作由二进制向量（或者说位数组）和一系列随机映射函数（哈希函数）两部分组成的数据结构。相比于我们平时常用的的 List、Map 、Set 等数据结构，它占用空间更少并且效率更高，但是缺点是其返回的结果是概率性的，而不是非常准确的。理论情况下添加到集合中的元素越多，误报的可能性就越大。并且，存放在布隆过滤器的数据不容易删除。
 
-![bit数组](E:\MyNote\JavaDocs\docs\database\redis\images\bit数组.png)
+![bit数组](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/redis/images/bit%E6%95%B0%E7%BB%84.png)
 
 位数组中的每个元素都只占用 1 bit ，并且每个元素只能是 0 或者 1。这样申请一个 100w 个元素的位数组只占用 1000000Bit / 8 = 125000 Byte = 125000/1024 kb ≈ 122kb 的空间。
 
@@ -107,7 +107,7 @@ public Object getObjectInclNullById(Integer id) {
 1. 对给定元素再次进行相同的哈希计算；
 2. 得到值之后判断位数组中的每个元素是否都为 1，如果值都为 1，那么说明这个值在布隆过滤器中，如果存在一个值不为 1，说明该元素不在布隆过滤器中。
 
-![布隆过滤器-存储](E:\MyNote\JavaDocs\docs\database\redis\images\布隆过滤器-存储.png)
+![布隆过滤器-存储](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/redis/images/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8-%E5%AD%98%E5%82%A8.png)
 
 如图所示，当字符串存储要加入到布隆过滤器中时，该字符串首先由多个哈希函数生成不同的哈希值，然后在对应的位数组的下表的元素设置为 1（当位数组初始化时 ，所有位置均为0）。当第二次存储相同字符串时，因为先前的对应位置已设置为1，所以很容易知道此值已经存在（去重非常方便）。
 
