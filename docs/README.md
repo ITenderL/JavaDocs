@@ -1,6 +1,6 @@
 # ITender Docs
 
-### 基础
+### Java基础
 
 #### 基础知识
 
@@ -181,9 +181,9 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 **知识点/面试题:**
 
-* [Spring 常见问题总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring常见问题总结.md)
-
-* [SpringBoot 入门指南](https://github.com/Snailclimb/springboot-guide)
+* [Spring 常见问题总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-basis.md)
+* [Spring-MVC常见问题总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-mvc-basis.md)
+* [SpringBoot 入门指南](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-boot-basis.md)
 
 **重要知识点详解：**
 
