@@ -63,9 +63,15 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ### Java新特性
 
-* Java 8：[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)、[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
+#### Java 8
 
-* Java9~Java15: [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
+[Java 8 新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/Java8新特性总结.md)
+
+[Java8常用新特性总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java8-common-new-features.md)
+
+#### Java9~Java15
+
+ [一文带你看遍 JDK9~15 的重要新特性！](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/new-features/java新特性总结.md)
 
 ### 小技巧
 
@@ -159,31 +165,17 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ## 系统设计
 
-### 系统设计必备基础
-
-#### RESTful API
-
-我们在进行后端开发的时候，主要的工作就是为前端或者其他后端服务提供 API 比如查询用户数据的 API 。RESTful API 是一种基于 REST 构建的 API，它是一种被设计的更好使用的 API。
-
-相关阅读：[RestFul API 简明教程](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/basis/RESTfulAPI.md)
-
-#### 命名
-
-编程过程中，一定要重视命名。因为好的命名即是注释，别人一看到你的命名就知道你的变量、方法或者类是做什么的！
-
-相关阅读： [Java 命名之道](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/naming.md) 。
-
 ### 常用框架
 
 如果你没有接触过 Java Web 开发的话，可以先看一下我总结的 [《J2EE 基础知识》](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/J2EE基础知识.md) 。虽然，这篇文章中的很多内容已经淘汰，但是可以让你对 Java 后台技术发展有更深的认识。
 
-#### Spring/SpringBoot (必看 👍)
+#### Spring/SpringBoot 
 
 **知识点/面试题:**
 
 * [Spring 常见问题总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-basis.md)
-* [Spring-MVC常见问题总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-mvc-basis.md)
-* [SpringBoot 入门指南](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-boot-basis.md)
+* [SpringMVC常见问题总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-mvc-basis.md)
+* [SpringBoot 常见问题总结](https://github.com/ITenderness/JavaDocs/blob/main/docs/system-design/framework/spring/spring-boot-basis.md)
 
 **重要知识点详解：**
 
@@ -193,7 +185,6 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 * [Spring 中都用到了那些设计模式?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/Spring设计模式总结.md)
 
-* [SpringBoot 自动装配原理？”](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/framework/spring/SpringBoot自动装配原理.md)**
 
 #### MyBatis
 
