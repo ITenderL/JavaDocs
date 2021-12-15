@@ -129,7 +129,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ### MySQL
 
-* [数据库基础](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql-basis.md)
+* [数据库基础](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-basis.md)
 * [MySQL索引](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-index-introduce.md)
 * [MySQL性能优化-索引](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-optimize-index.md)
 * [MySQL性能优化-表结构](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-optimize-index)
