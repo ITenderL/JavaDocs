@@ -831,7 +831,7 @@ explain select * from emp where id = 1 or age = 30;
 
 ![img](images/SQL优化/or优化03.png)
 
-**建议使用 union 替换 or ** 
+**建议使用 union 或union all替换 or进行查询 ** 
 
 ![img](images/SQL优化/or优化04.png)
 
