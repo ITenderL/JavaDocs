@@ -75,8 +75,8 @@ MyISAM是非聚集索引，也是使用B+Tree作为索引结构，索引和数�
 
 **8.表的具体行数**
 
-MyISAM：保存有表的总行数，如果select count(*) from table;会直接取出出该值。
-InnoDB：没有保存表的总行数，如果使用select count(*) from table；就会遍历整个表，消耗相当大，但是在加了wehre条件后，myisam和innodb处理的方式都一样。
+MyISAM：保存有表的总行数，如果select count() from table;会直接取出出该值。
+InnoDB：没有保存表的总行数，如果使用select count() from table；就会遍历整个表，消耗相当大，但是在加了wehre条件后，myisam和innodb处理的方式都一样。
 
 **9.是否支持 MVCC**
 
