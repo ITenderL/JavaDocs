@@ -93,7 +93,13 @@
 | 变量引用             | super    | this       | void     |              |            |           |        |
 | 保留字               | goto     | const      |          |              |            |           |        |
 
-### 权限修饰符
+#### final 在 Java 中的作用
+
+1. final 修饰的类叫最终类，该类不能被继承。
+2. final 修饰的方法不能被重写。
+3. final 修饰的变量叫常量，常量必须初始化，初始化之后值就不能被修改。
+
+#### 权限修饰符
 
 | 修饰符      | 当前类 | 同一包内 | 其他包子类 | 不同包 |
 | :---------- | :----- | :------- | :--------- | :----- |
@@ -351,8 +357,6 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
 
 ### equals和hashCode
 
-> 为什么重写 `equals()` 时必须重写 `hashCode()` 方法?
-
 #### hashCode() 介绍
 
 `hashCode()` 的作用是获取哈希码（`int` 整数），也称为散列码。这个哈希码的作用是确定该对象在哈希表中的索引位置。`hashCode()`定义在 JDK 的 `Object` 类中，这就意味着 Java 中的任何类都包含有 `hashCode()` 函数。另外需要注意的是： `Object` 的 `hashCode()` 方法是本地方法，也就是用 C 语言或 C++ 实现的，该方法通常用来将对象的内存地址转换为整数之后返回。
@@ -383,9 +387,107 @@ public native int hashCode();
 
 我们刚刚也提到了 `HashSet`,如果 `HashSet` 在对比的时候，同样的 `hashcode` 有多个对象，它会使用 `equals()` 来判断是否真的相同。也就是说 `hashcode` 只是用来缩小查找成本。
 
+### == 和 equals 的区别
+
+**== 解读**
+
+对于基本类型和引用类型 == 的作用效果是不同的
+
+**基本类型**：比较的是值是否相同；
+
+**引用类型**：比较的是引用是否相同；
+
+代码示例：
+
+```java
+String x = "string"; 
+String y = "string"; 
+String z = new String("string"); 
+System.out.println(x==y); // true 
+System.out.println(x==z); // false 
+System.out.println(x.equals(y)); // true 
+System.out.println(x.equals(z)); // true
+```
+
+代码解读：因为 x 和 y 指向的是同一个引用，所以 == 也是 true，而 new String()方法则在堆内存开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。
+
+> 因为 Java 只有值传递，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。
+
+**equals 解读**
+
+equals 本质上就是 ==，只不过 String 和 Integer 等重写了 equals 方法，把它变成了值比较。看下面的代码就明白了。
+
+首先来看默认情况下 equals 比较一个有相同值的对象，代码如下：
+
+```java
+class Cat {
+    public Cat(String name) {
+        this.name = name;
+    }
+    private String name; 
+    public String getName() {
+        return name;
+    } 
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+Cat c1 = new Cat("itender");
+Cat c2 = new Cat("itender");
+System.out.println(c1.equals(c2)); // false
+```
+
+输出结果出乎我们的意料，竟然是 false？这是怎么回事，看了 equals 源码就知道了，源码如下：
+
+```java
+public boolean equals(Object obj) {    
+    return (this == obj); 
+}
+```
+
+原来 equals 本质上就是 ==。那问题来了，两个相同值的 String 对象，为什么返回的是 true？代码如下：
+
+```java
+String s1 = new String("itender");
+String s2 = new String("itender");
+System.out.println(s1.equals(s2)); // true
+```
+
+同样的，当我们进入 String 的 equals 方法，找到了答案，代码如下：
+
+```java
+public boolean equals(Object anObject) {
+    if (this == anObject) {
+        return true;
+    }
+    if (anObject instanceof String) {
+        String anotherString = (String)anObject;
+        int n = value.length;
+        if (n == anotherString.value.length) {
+            char v1[] = value;
+            char v2[] = anotherString.value;
+            int i = 0;
+            while (n-- != 0) {
+                if (v1[i] != v2[i])
+                    return false;
+                    i++;
+                }
+                return true;
+            }
+    }
+    return false;
+}
+```
+
+原来是 String 重写了 Object 的 equals 方法，把引用比较改成了值比较。
+
+总结 ：== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重新了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。
+
 ### 反射
 
-#### 何为反射？
+#### 反射定义
+
+JAVA反射机制是在运行状态中，对于任意一个类。都能都知道这个类的所有属性和方法，对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称之为java语言的反射机制；
 
 如果说大家研究过框架的底层原理或者咱们自己写过框架的话，一定对反射这个概念不陌生。
 
