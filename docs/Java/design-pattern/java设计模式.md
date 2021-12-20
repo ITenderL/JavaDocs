@@ -724,6 +724,8 @@ public class StrategyTest {
 
 #### 结构与实现
 
+![image-20211220111946993](images/proxy.png)
+
 **结构**
 
 我们将创建一个 *Image* 接口和实现了 *Image* 接口的实体类。*ProxyImage* 是一个代理类，减少 *RealImage* 对象加载的内存占用。
