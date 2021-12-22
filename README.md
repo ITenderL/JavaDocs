@@ -134,13 +134,8 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 * [MySQL性能优化-索引](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-optimize-index.md)
 * [MySQL性能优化-表结构](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-optimize-index.md)
 * [MySQL主从复制原理及实现](https://github.com/ITenderness/JavaDocs/blob/main/docs/database/mysql/mysql-master-slave.md)
-* [MySQL知识点总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql知识点&面试题总结.md)
-* [一千行 MySQL 学习笔记](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/a-thousand-lines-of-mysql-study-notes.md)
-* [MySQL 高性能优化规范建议](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-high-performance-optimization-specification-recommendations.md)
 
 **重要知识点：**
-
-* [MySQL数据库索引总结](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/mysql-index.md)
 
 * [事务隔离级别(图文详解)](https://github.com/Snailclimb/JavaGuide/blob/main/docs/database/mysql/transaction-isolation-level.md)
 
