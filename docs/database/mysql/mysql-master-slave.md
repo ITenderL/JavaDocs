@@ -129,11 +129,8 @@ binlog_format=STATEMENT
 下一步在Master数据库创建数据同步用户，授予用户 slave REPLICATION SLAVE权限和REPLICATION CLIENT权限，用于在主从库之间同步数据
 
 ```sql
-CREATE USER 'db_sync'@'%' IDENTIFIED BY 'root';
-GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'db_sync'@'%';
-show grants for 'db_sync'@'%';
-
-GRANT REPLICATION SLAVE ON *.* TO 'db_sync'@'%' IDENTIFIED BY 'db_sync';
+CREATE USER 'repl'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'root'; 
+GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%'; 
 ```
 
 #### 3.配置从节点slave
@@ -175,7 +172,7 @@ File和Position字段的值后面将会用到，在后面的操作完成之前�
 * 在mysql-slave中进入mysql执行以下命令
 
 ```sql
-change master to master_host='172.17.0.5', master_user='db_sync', master_password='root', master_port=3306, master_log_file='mysql-bin.000001', master_log_pos= 711, master_connect_retry=30;
+change master to master_host='172.17.0.5', master_user='repl', master_password='root', master_port=3306, master_log_file='mysql-bin.000001', master_log_pos=1217, master_connect_retry=30;
 ```
 
 1. master_port： Master的端口号，指的是容器的端口号
@@ -204,7 +201,9 @@ stop slave;
 reset master;
 ```
 
-![](images/master-slave/slave_status.png)
+![image-20211224100140074](images/master-slave/slave_status.png)
+
+MySQL8可能出现的错误：https://www.modb.pro/db/29919
 
 #### 5.测试
 
