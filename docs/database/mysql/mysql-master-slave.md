@@ -165,7 +165,7 @@ relay-log=mysql-relay
 
 `show master status;`主节点查看状态
 
-![image-20211222105355835](images/master-status.png)
+![image-20211224101611114](images/master-slave/master_status.png)
 
 File和Position字段的值后面将会用到，在后面的操作完成之前，需要保证Master库不能做任何操作，否则将会引起状态变化，File和Position字段的值变化
 
