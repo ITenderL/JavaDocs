@@ -8,10 +8,10 @@
 
 #### 重要知识详解
 
-- [为什么 Java 中只有值传递？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/why-there-only-value-passing-in-java.md)
-- [什么是反射机制？反射机制的应用场景有哪些？](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/反射机制详解.md)
-- [代理模式详解：静态代理+JDK/CGLIB 动态代理实战](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/代理模式详解.md)
-- [常见的 IO 模型有哪些？Java 中的 BIO、NIO、AIO 有啥区别?](https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/basis/java基础知识总结)
+- [为什么 Java 中只有值传递？]()
+- [什么是反射机制？反射机制的应用场景有哪些？]()
+- [代理模式详解：静态代理+JDK/CGLIB 动态代理实战]()
+- [常见的 IO 模型有哪些？Java 中的 BIO、NIO、AIO 有啥区别?]()
 
 ### 集合
 
@@ -345,3 +345,4 @@ Dubbo 是一款国产的 RPC 框架，由阿里开源。相关阅读：
 - [搞懂异地多活，看这篇就够了](https://mp.weixin.qq.com/s/T6mMDdtTfBuIiEowCpqu6Q)
 - [四步构建异地多活](https://mp.weixin.qq.com/s/hMD-IS__4JE5_nQhYPYSTg)
 - [《从零开始学架构》— 28 | 业务高可用的保障：异地多活架构](http://gk.link/a/10pKZ)
+
